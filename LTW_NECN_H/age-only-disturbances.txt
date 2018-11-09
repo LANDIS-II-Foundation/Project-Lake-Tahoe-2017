@@ -8,7 +8,7 @@ CohortBiomassReductions
 >> -----------   -----   ---------
 >>    fire           0%      0% 
 >>    wind           0%         0%
->>    harvest       85%         0%
+    harvest       0%         0%
     (default)     0%         0% 
 
 

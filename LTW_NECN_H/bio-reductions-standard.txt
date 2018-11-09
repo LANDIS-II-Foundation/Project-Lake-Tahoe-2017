@@ -5,7 +5,7 @@ CohortBiomassReductions
 
 >> Disturbance   Woody   Non-Woody
 >> -----------   -----   ---------
-    fire          33%       100%
+   fire           33%       100%
     wind           0%         0%
     harvest       75%         0%
     (default)     15%         0%
@@ -15,5 +15,5 @@ DeadBiomassReductions
 
 >> Disturbance   Woody   Non-Woody
 >> -----------   -----   ---------
-    fire           8%       100%
+    fire           10%       100%
     (default)      0%         0%
