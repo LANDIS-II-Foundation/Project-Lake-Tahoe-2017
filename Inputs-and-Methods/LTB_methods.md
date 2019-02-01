@@ -78,35 +78,20 @@ at the climate region scale that I adapted from Louise's work
 to name.  Full list of files is available here: <https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/LTW_LANDIS_Scenarios/NECN_input_maps/>
 
 SoilDepthMapName - SSURGO
-
 SoilDrainMapName- SSURGO
-
 SoilBaseFlowMapName
-
 SoilStormFlowMapName
-
 SoilFieldCapacityMapName
-
 SoilWiltingPointMapName
-
 SoilPercentSandMapName
-
 SoilPercentClayMapName
-
-### Soil carbon maps 
-
+###Soil carbon maps 
 InitialSOM1CsurfMapName - ORNL
-
 InitialSOM1NsurfMapName - ratio
-
 InitialSOM1CsoilMapName - ORNL
-
 InitialSOM1NsoilMapName- ratio
-
 InitialSOM2CMapName - ORNL
-
 InitialSOM2NMapName- ratio
-
 InitialSOM3CMapName - ORNL
 
 InitialSOM3NMapName- ratio
@@ -123,7 +108,7 @@ SOM1surf (75 g C m^-2^; 2.16% of total), SOM1soil (100 g C m^-2^;
 then used raster calculator to create individual SOM pool maps.
 
 The new total soil carbon values are:
-![Carbon inputs](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/LTW_SOC.png/)
+![Carbon inputs](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/LTW_SOC.png)
 
 
 So if anything, we were slightly over predicting soil carbon, especially
@@ -148,7 +133,7 @@ work well for a large number of different soils.*
 
 I used the guidelines above to develop these parameters
 
-   | Century name  | \% of total C |  C/N ratio
+  Pool | Century name  | \% of total C |  C/N ratio
   ----------| -------------- |--------------- |-----------
   SOM1surf |  Microbial  |    1         |      10
   SOM1soil |  Active     |    2         |      10
@@ -188,29 +173,17 @@ calculated using this equation: *
 (DIA\*2.54))*
 
 *partially defined by:*
-
 *Species category*
-
 *JENKINS\_ROOT\_RATIO\_B1*
-
 *Softwood (S)*
-
 *-1.5619*
-
 *Hardwood (H)*
-
 *-1.6911*
-
 *Species category*
-
 *JENKINS\_ROOT\_RATIO\_B2*
-
 *Softwood (S)*
-
 *0.6614*
-
 *Hardwood (H)*
-
 *0.8160*
 
 I just used the FIA equation from above and applied it to our initial
@@ -638,7 +611,7 @@ Scenarios are based solely on west shore for acres
     percentage of general forest -- especially in steep slopes compared
     to LTW (see appendix A).
 
-**Stand Delineation **
+**Stand Delineation**
 
 -   Everything over 116 ha (\~7062 total ha) were split into smaller
     polygons at maximum of 116 -- keeping larger end
@@ -673,36 +646,36 @@ either incorporated into existing model runs or left for the next model
 round.
 
 1.  *SALVAGE LOGGING*
-    a.  GOAL: Salvage is a priority over live thinning and occurs in both WUI
+      a.  GOAL: Salvage is a priority over live thinning and occurs in both WUI
         Defense and WUI Threat. 90% of the area that experienced a high
         mortality event (from either fire or insects) would be salvaged
         prior to new live thinning occurring. 40% of the salvaged area
         would be replanted with: 80% Jeffrey pine, 10% cedar, 5% red
         fir, 5% sugar pine.
-    b.  WHAT HAPPENED: Salvage logging was NOT implemented as expected. However, it
+      b.  WHAT HAPPENED: Salvage logging was NOT implemented as expected. However, it
         could be added in the next round. Replanting did NOT occur. Note
         that the materials harvested do not appear within the harvest
         log file. Instead, they show as a reduction in the deadwood pool
         maps from the NECN extension.
 
 2.  *STAND RE-ENTRY*
-    c.  GOAL: Re-entry after harvest or disturbance was to be set at the
+      c.  GOAL: Re-entry after harvest or disturbance was to be set at the
         dominant mean FRI types for each management zone.
-    d.  WHAT HAPPENED: Stands were re-entered more than expected. MinTimeSinceDamage
+      d.  WHAT HAPPENED: Stands were re-entered more than expected. MinTimeSinceDamage
         was the only restriction used when MinTimeSinceHarvest should
         also have been used. Additional replicates were run with the
         fixes:
-        i.  Scenario 2: stand re-entry occurs at 20 years after
+          i.  Scenario 2: stand re-entry occurs at 20 years after
             disaster/harvest.
-        ii. Scenario 3 & 4: stand re-entry occurs at 11 years.
-    e.  The result of the changes was increased stand carbon since fewer
+          ii. Scenario 3 & 4: stand re-entry occurs at 11 years.
+      e.  The result of the changes was increased stand carbon since fewer
         young cohorts were wiped out. There were also fewer harvest
         events that resulted in nothing coming off the landscape.
 
 3.  *HARVEST RESIDUES*
-    f.  GOAL: 60% of hand thinning and 80% of mechanical thinning woody
+      f.  GOAL: 60% of hand thinning and 80% of mechanical thinning woody
         residue to be harvested.
-    g.  WHAT HAPPENED: Only 5% of woody harvest residues were removed. Additional
+      g.  WHAT HAPPENED: Only 5% of woody harvest residues were removed. Additional
         replicates were run with the corrected harvest targets.
 
 SCENARIO 1
@@ -770,9 +743,9 @@ available acres to treat in the zone.
   **Management Area** |  **Treatment**  | **Treatment Allocation By Zone**  | **Annual Treatment Acres**  | **Total Annual Acres**  | **Total Acres Available**
   ---------------------|---------------|----------------------------------|----------------------------|------------------------|----------------------------
   WUI Defense Zone |  Mechanical | 20% |  150 | 750 | 6545
-  | and | 80% | 600 | 10189
+                   | Hand | 80% | 600 | 10189
   WUI Threat Zone | Mechanical | 20% | 50 | 250 | 2512
-  | Hand  |  80%  | 200 | 12217
+                  | Hand  |  80%  | 200 | 12217
   General Forest | No treatment | 0 | 0 | 0 | 27025
   Wilderness | NA | NA | 0 | 0 | 0 | 89
 
@@ -800,12 +773,12 @@ Table 2: Historic LTB data identifying hectares treated per year defined
 by target area (Lake Tahoe West, CA, and NV broken out between defense
 and threat zones).
 
-**Zone** | **LTW-Defense** | **LTW-Threat** | **LTW-General** | **CA-Defense** | **CA-Threat** | **CA-General** | **NV-Defense** | **NV-Threat** | **NV-General**
--------------------------------------|-----------------|----------------|-----------------|----------------|---------------|----------------|----------------|--------------- ----------------
-**Code\** | 8 | 7 | 9 | 5  | 4 | 6 | 2 | 1 | 3
-**Hectares** | 6865 | 6117  | 10846 | 14335 | 7634 | 17437 | 7652 |  6001 |  7748
-**Mean treated area /yr (ha)** | 216.3 | 101.96 | 0 | 283.05 | 34.1 |  0 | 193.7 | 112.3 | 0
-**Percentage of each zone treated** | 68.0  | 32.0 |  0.0  | 89.2 | 0.1 | 0.0 |  63.3 | 36.7 |  0.0
+ **Zone** | LTW-Defense | LTW-Threat | LTW-General | CA-Defense | CA-Threat | CA-General | NV-Defense | NV-Threat | NV-General
+ ---------|-------------|------------|-------------|------------|-----------|------------|------------|-----------|------------
+ Code\*    | 8          | 7          | 9           | 5          | 4        | 6           | 2          | 1         | 3
+ Hectares | 6865 | 6117  | 10846 | 14335 | 7634 | 17437 | 7652 |  6001 |  7748
+ Mean treated area /yr (ha) | 216.3 | 101.96 | 0 | 283.05 | 34.1 |  0 | 193.7 | 112.3 | 0
+ Percentage of each zone treated | 68.0  | 32.0 |  0.0  | 89.2 | 0.1 | 0.0 |  63.3 | 36.7 |  0.0
 
 *Biomass Targets*
 
@@ -1272,7 +1245,7 @@ with increasing vulnerability as the trees aged.
 Table 1
 
 
-   |Fir Engraver | Jeffrey Pine Beetle | Mountain Pine Beetle
+  Dispersal Parameters | Fir Engraver | Jeffrey Pine Beetle | Mountain Pine Beetle
   ---------------------|----------------|---------------------|----------------------
   Pattern           |   Cyclic Uniform | Cyclic Uniform   |    Cyclic Uniform
   Min interval      |   10             | 10               |    10
@@ -1312,21 +1285,13 @@ the monthly wood mortality parameter in NECN.
 References:
 
 Jactel 1991
-
 USFS Fir Engraver Facts
-
 Schwilk 2006
-
 Ferrel 1994
-
 Joel Egan (USFS) conversation
-
 MPB CFS Synthesis
-
 Safranyik 2006
-
 Cole and Amman
-
 Bradley and Tueller 2001
 
 Climate Change
