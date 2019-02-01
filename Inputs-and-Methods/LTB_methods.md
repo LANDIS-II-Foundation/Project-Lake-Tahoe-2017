@@ -5,62 +5,58 @@ parameters used, as well as the version of extension used are all
 available on github at:
 https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017
 
-Contents {#contents .TOCHeading}
+Contents (#contents)
 ========
 
-[NECN Hydro 2](#necn-hydro)
+[NECN Hydro](#necn-hydro)
 
-[NECN-H input maps 2](#necn-h-input-maps)
+[NECN-H input maps](#necn-h-input-maps)
 
-[Soil physical property/quality maps
-2](#soil-physical-propertyquality-maps)
+[Soil physical property/quality maps](#soil-physical-propertyquality-maps)
 
-[Soil carbon maps 2](#soil-carbon-maps)
+[Soil carbon maps](#soil-carbon-maps)
 
-[Dead wood maps 4](#dead-wood-maps)
+[Dead wood maps](#dead-wood-maps)
 
-[Initial Communities 5](#initial-communities)
+[Initial Communities](#initial-communities)
 
-[Soil Decay rates 5](#soil-decay-rates)
+[Soil Decay rates](#soil-decay-rates)
 
-[Species Parameters 5](#species-parameters)
+[Species Parameters](#species-parameters)
 
-[SCRAPPLE 9](#scrapple)
+[SCRAPPLE](#scrapple)
 
-[Methods 9](#methods)
+[Methods](#methods)
 
-[1. Ignition 9](#ignition)
+[Ignition](#ignition)
 
-[2. Fire Spread (Growth) 11](#_Toc534465853)
+[Fire Spread (Growth)](#fire-spread)
 
-[3. Fire Intensity 16](#fire-intensity)
+[Fire Intensity](#fire-intensity)
 
-[4. Fire Severity 16](#fire-severity)
+[Fire Severity](#fire-severity)
 
-[Harvest 19](#harvest)
+[Harvest ](#harvest)
 
-[SCENARIO 1 20](#scenario-1)
+[SCENARIO 1 ](#scenario-1)
 
-[SCENARIO 2: WUI Focused 20](#scenario-2-wui-focused)
+[SCENARIO 2: WUI Focused](#scenario-2-wui-focused)
 
-[SCENARIO 3: WUI Extended 23](#scenario-3-wui-extended)
+[SCENARIO 3: WUI Extended](#scenario-3-wui-extended)
 
-[SCENARIO 4: WUI Extended Rx Focus
-26](#scenario-4-wui-extended-rx-focus)
+[SCENARIO 4: WUI Extended Rx Focus](#scenario-4-wui-extended-rx-focus)
 
-[Base BDA 30](#base-bda)
+[Base BDA](#base-bda)
 
-[Climate Change 32](#climate-change)
+[Climate Change](#climate-change)
 
-**[\
-]{.underline}**
 
 NECN Hydro
 ==========
 
 This section records the translation process from Century Succession
 inputs to NECN-H inputs. For each new input, I will attempt to create a
-method for translating existing Century inputs into NECN-H inputs. IF no
+method for translating existing Century inputs into NECN-H inputs. If no
 method can be found for translation, new inputs will be mode with data
 source suggestions. The big change here is the elimination of
 ecoregions, which are replaced by a series of maps containing soils
@@ -71,7 +67,7 @@ probably be pertinent for similar input translation for other projects.
 There is a companion spreadsheet for this called
 'Input\_Translator.xlsx' in the same directory as this.
 
-NECN-H input maps
+##NECN-H input maps
 -----------------
 
 ### Soil physical property/quality maps
@@ -79,7 +75,7 @@ NECN-H input maps
 SSURGO is incomplete for the basin, so some of these are just constants
 at the climate region scale that I adapted from Louise's work
 (Loudermilk et al. 2013, Loudermilk et al. 2014). Source is denoted next
-to name.
+to name.  Full list of files is available here: <https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/LTW_LANDIS_Scenarios/NECN_input_maps/>
 
 SoilDepthMapName - SSURGO
 
@@ -127,9 +123,8 @@ SOM1surf (75 g C m^-2^; 2.16% of total), SOM1soil (100 g C m^-2^;
 then used raster calculator to create individual SOM pool maps.
 
 The new total soil carbon values are:
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/LTW_SOC.png/>
 
-![C:\\Users\\kret\\Desktop\\LTB\_SOC.jpg](media/image1.jpeg){width="3.8020833333333335in"
-height="5.235785214348207in"}
 
 So if anything, we were slightly over predicting soil carbon, especially
 on the east shore, but not by a ton landscape-wide
@@ -140,7 +135,7 @@ ratios of the pools, described as
 *One of the most difficult parts of initializing the model is estimating
 the C, N, P, and S levels for the different soil fractions. In most
 soils the **active soil fraction is approximately 2 to 4% of the total
-soil C**. The **slow SOM fraction makes up approximately 55%** of the
+soil C.** The **slow SOM fraction makes up approximately 55%** of the
 total SOM. Unfortunately there is not a good technique for estimating
 the size of the stabilized **microbial products pool; however, it is
 estimated that it is approximately 10 to 20% of the soil**. The
@@ -153,12 +148,12 @@ work well for a large number of different soils.*
 
 I used the guidelines above to develop these parameters
 
-             Century name   \% of total C   C/N ratio
-  ---------- -------------- --------------- -----------
-  SOM1surf   Microbial      1               10
-  SOM1soil   Active         2               10
-  SOM2       Slow           59              17.5
-  SOM3       Passive        38              8.5
+            | Century name  | \% of total C |  C/N ratio
+  ----------| -------------- |--------------- |-----------
+  SOM1surf |  Microbial  |    1         |      10
+  SOM1soil |  Active     |    2         |      10
+  SOM2     |  Slow       |    59        |      17.5
+  SOM3     |  Passive    |    38         |     8.5
 
 ### Dead wood maps
 
@@ -180,7 +175,7 @@ portion of the tree.
 *The carbon (pounds) of coarse roots *
 
 *\>0.1 inch in root diameter. Calculated for live trees with a diameter
-≥1 inch, and dead trees with a diameter ≥ 5 inches, for both timber and
+&gt;1 inch, and dead trees with a diameter &gt;5 inches, for both timber and
 woodland species. This is a per tree value and must be multiplied by
 TPA\_UNADJ to obtain per acre information. Carbon is assumed to be
 one-half the value of belowground biomass as follows: CARBON\_BG = 0.5
@@ -287,45 +282,44 @@ Potential solutions:
 
 5.  Introduce white pine blister rust as mortality agent.
 
-Table 1.
+Table 1.Species parameters
+Species	|	Longevity	|	Sexual Maturity	|	Shade Tol.	|	Shade source	|	Changes?	|	Fire Tolerance	|	Seed DispersalEffective Distance	|	Seed Dispersal Maximum Distance	|	Veg Reproduction	|	Veg Sprout Age Min	|	Veg Sprout Age Max	|	Post-Fire Regen	|
+-----|-----|------|-------|-------|-------|------|------|-------|-------|--------|------|------|
+PinuJeff	|	500	|	25	|	2	|	Jenkinsen, Silvics Manual. "The species is intolerant of shade"	|	Change to 1	|	5	|	50	|	300	|	0	|	0	|	0	|	none	|
+PinuLamb	|	550	|	20	|	3	|	Kinlock and Scheuner, Silvics Manual. " Sugar pine tolerates shade better than ponderosa pine but is slightly less tolerant than incense-cedar and Douglas-fir and much less so than white fir (14)."	|	Change to 2?	|	5	|	30	|	400	|	0	|	0	|	0	|	none	|
+CaloDecu	|	500	|	30	|	3	|	Powers and Oliver, Silvics Manual, "Incense-cedar has been rated as more shade tolerant (22) than the associated pines and Douglas-fir (16), and perhaps less tolerant than white fir and grand fir."	|	Hold?	|	5	|	30	|	1000	|	0	|	0	|	0	|	none	|
+AbieConc	|	450	|	35	|	4	|	Laacke, Silvics Manual. "In general, white fir becomes established best in partial shade, but once established grows best in full sunlight. It is less tolerant of shade than associated true firs (except red fir), is slightly more tolerant than Douglas-fir, and is much more tolerant than pines or oaks (37,41,56). Because white fir can survive and grow beneath heavy brush cover and eventually overtop the brush and dominate the site, many pure stands exist in otherwise mixed conifer areas (36)."	|	Hold?	|	3	|	30	|	500	|	0	|	0	|	0	|	none	|
+AbieMagn	|	500	|	40	|	3	|	Laacke, Silvics Manual. "Although red fir grows best in full sunlight, it can survive and grow for long periods in relatively dense shade. Red fir's tolerance of shade appears to be less than that of mountain hemlock, slightly less than that of white fir and Brewer spruce, but greater than that of all of its other associates. Red fir's capacity to maintain significantly more foliage under shade than white fir suggests that the tolerance difference between them is marginal (1). It is most accurately classed as tolerant of shade. Red fir seedlings are slightly more hardy in full sun than white fir seedlings but become established most easily in partial shade (14,26). "	|	Increase to 4?	|	4	|	30	|	500	|	0	|	0	|	0	|	none	|
+PinuCont	|	250	|	7	|	1	|	Lotan and Critchfield, Silvics Manual. "Lodgepole pine is very intolerant of shade and competition from other plant species."	|	Hold	|	2	|	30	|	300	|	0	|	0	|	0	|	none	|
+PinuMont	|	550	|	18	|	3	|	Graham, Silvics Manual. "It is classed as intermediate in shade tolerance when compared to other northwestern tree species."	|	Change to 2?	|	4	|	30	|	800	|	0	|	0	|	0	|	none	|
+TsugMert	|	800	|	20	|	5	|	Means, Silvics Manual. "Mountain hemlock is classed as tolerant of shade and other forms of competition (10,48,55)"	|	Hold	|	1	|	30	|	800	|	0.0005	|	100	|	800	|	none	|
+PinuAlbi	|	900	|	30	|	3	|	Arno and Hoff, Silvics Manual. "Although whitebark pine has been tentatively rated very intolerant of competition or shade (12), recent observers (8,25,60,66,71) believe that it is intermediate or intolerant, about equivalent to western white pine or interior Douglas-fir. Whitebark pine is less tolerant than subalpine fir, spruce, and mountain hemlock; however, it is more tolerant than lodgepole pine and alpine larch."	|	Change to 2?	|	2	|	30	|	2500	|	0.0001	|	100	|	900	|	none	|
+PopuTrem	|	175	|	15	|	1	|	Perala, Silvics Manual. "In both the eastern and western parts of its range, quaking aspen is classed as very intolerant of shade, a characteristic it retains throughout its life."	|	Hold	|	2	|	30	|	1000	|	0.9	|	1	|	175	|	resprout	|
+NonnResp	|	80	|	5	|	2	|		|		|	1	|	30	|	550	|	0.85	|	5	|	70	|	resprout	|
+NonnSeed	|	80	|	5	|	2	|		|		|	1	|	30	|	1000	|	0	|	0	|	0	|	none	|
+FixnResp	|	80	|	5	|	1	|		|		|	1	|	30	|	500	|	0.75	|	5	|	70	|	resprout	|
+FixnSeed	|	80	|	5	|	1	|		|		|	1	|	30	|	800	|	0	|	0	|	0	|	none	|
 
-  Species parameters                Sex-ual     Shade                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Fire   Seed Disp-ersal        Disper-sal           Veg             Veg Sprout Age   Veg Sprout Age   Post-Fire
-  -------------------- ------------ ----------- ------- --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ---------------- ------ ---------------------- -------------------- --------------- ---------------- ---------------- -----------
-  Species              Long-evity   Matu-rity   Tol.    Shade source                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              Changes?         Tol.   Effect-ive Distan-ce   Maxim-um Distan-ce   Repro-duction   Min              Max              Regen
-  PinuJeff             500          25          2       Jenkinsen, Silvics Manual. \"The species is intolerant of shade\"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Change to 1      5      50                     300                  0               0                0                none
-  PinuLamb             550          20          3       Kinlock and Scheuner, Silvics Manual. \" Sugar pine tolerates shade better than ponderosa pine but is slightly less tolerant than incense-cedar and Douglas-fir and much less so than white fir (14).\"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Change to 2?     5      30                     400                  0               0                0                none
-  CaloDecu             500          30          3       Powers and Oliver, Silvics Manual, \"Incense-cedar has been rated as more shade tolerant (22) than the associated pines and Douglas-fir (16), and perhaps less tolerant than white fir and grand fir.\"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   Hold?            5      30                     1000                 0               0                0                none
-  AbieConc             450          35          4       Laacke, Silvics Manual. \"In general, white fir becomes established best in partial shade, but once established grows best in full sunlight. It is less tolerant of shade than associated true firs (except red fir), is slightly more tolerant than Douglas-fir, and is much more tolerant than pines or oaks (37,41,56). Because white fir can survive and grow beneath heavy brush cover and eventually overtop the brush and dominate the site, many pure stands exist in otherwise mixed conifer areas (36).\"                                                                                                                                                                                       Hold?            3      30                     500                  0               0                0                none
-  AbieMagn             500          40          3       Laacke, Silvics Manual. \"Although red fir grows best in full sunlight, it can survive and grow for long periods in relatively dense shade. Red fir\'s tolerance of shade appears to be less than that of mountain hemlock, slightly less than that of white fir and Brewer spruce, but greater than that of all of its other associates. Red fir\'s capacity to maintain significantly more foliage under shade than white fir suggests that the tolerance difference between them is marginal (1). It is most accurately classed as tolerant of shade. Red fir seedlings are slightly more hardy in full sun than white fir seedlings but become established most easily in partial shade (14,26). \"   Increase to 4?   4      30                     500                  0               0                0                none
-  PinuCont             250          7           1       Lotan and Critchfield, Silvics Manual. \"Lodgepole pine is very intolerant of shade and competition from other plant species.\"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Hold             2      30                     300                  0               0                0                none
-  PinuMont             550          18          3       Graham, Silvics Manual. \"It is classed as intermediate in shade tolerance when compared to other northwestern tree species.\"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Change to 2?     4      30                     800                  0               0                0                none
-  TsugMert             800          20          5       Means, Silvics Manual. \"Mountain hemlock is classed as tolerant of shade and other forms of competition (10,48,55)\"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     Hold             1      30                     800                  0.0005          100              800              none
-  PinuAlbi             900          30          3       Arno and Hoff, Silvics Manual. \"Although whitebark pine has been tentatively rated very intolerant of competition or shade (12), recent observers (8,25,60,66,71) believe that it is intermediate or intolerant, about equivalent to western white pine or interior Douglas-fir. Whitebark pine is less tolerant than subalpine fir, spruce, and mountain hemlock; however, it is more tolerant than lodgepole pine and alpine larch.\"                                                                                                                                                                                                                                                                  Change to 2?     2      30                     2500                 0.0001          100              900              none
-  PopuTrem             175          15          1       Perala, Silvics Manual. \"In both the eastern and western parts of its range, quaking aspen is classed as very intolerant of shade, a characteristic it retains throughout its life.\"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    Hold             2      30                     1000                 0.9             1                175              resprout
-  NonnResp             80           5           2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1      30                     550                  0.85            5                70               resprout
-  NonnSeed             80           5           2                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1      30                     1000                 0               0                0                none
-  FixnResp             80           5           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1      30                     500                  0.75            5                70               resprout
-  FixnSeed             80           5           1                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  1      30                     800                  0               0                0                none
 
-Table 2.
 
-  Species    Species Functional            GDD                          GDD                           Min Jan                              
-  ---------- -------------------- -------- ----- ---------------------- ------ ---------------------- --------- --------- ---------------- ---------------------
-             Type                 N-fix?   Min   10% value from Atlas   Max    90% value from atlas   Temp      Drought   Leaf Longevity   Epicormic Resprout?
-  PinuJeff   1                    N        555   1200                   2149   2800                   -5        0.94      6                N
-  PinuLamb   1                    N        815   1300                   2866   2800                   -5        0.9       2.5              N
-  CaloDecu   1                    N        837   1400                   2938   3100                   -18       0.99      4                N
-  AbieConc   1                    N        540   700                    2670   2500                   -10       0.93      8                N
-  AbieMagn   1                    N        483   1100                   1257   1700                   -10       0.87      8                N
-  PinuCont   1                    N        276   500                    1230   1300                   -18       0.87      3.5              N
-  PinuMont   1                    N        155   500                    1220   1800                   -18       0.82      7                N
-  TsugMert   1                    N        235   500                    1200   1400                   -18       0.8       4.5              Y
-  PinuAlbi   1                    N        230   300                    1205   1200                   -18       0.9       5.5              Y
-  PopuTrem   2                    N        600   600                    3000   3000                   -10       0.82      1                Y
-  NonnResp   3                    N        400   400                    4000   4000                   -10       0.99      1.5              Y
-  NonnSeed   3                    N        400   400                    4000   4000                   -10       0.97      1.5              N
-  FixnResp   3                    Y        400   400                    4000   4000                   -10       0.97      1.5              Y
-  FixnSeed   3                    Y        400   400                    4000   4000                   -10       0.99      1.5              N
+Table 2. Species Climate Parameters
+
+  Species  |  Species Functional Type    |  N-fix | GDD Min | GDD 10% value from Atlas | GDD Max| GDD 90% value | Min Temp.| Drought | Leaf Longevity | Epicormic resprout  | 
+  ---------| --------------------| --------| -----| ----------------------| ------| ----------------------| --------- |---------| ----------------| ---------------------|
+  PinuJeff |  1                 |   N      |  555 |  1200   |                2149  | 2800         |          -5    |    0.94    |  6         |       N
+  PinuLamb |   1                |    N    |    815 |  1300  |                 2866 |   2800       |            -5 |       0.9   |    2.5    |          N
+  CaloDecu |  1                 |   N     |   837 |  1400   |                2938 |  3100         |          -18  |     0.99    |  4        |        N
+  AbieConc |   1                |    N    |    540 |   700  |                  2670 |   2500      |             -10 |      0.93 |     8      |          N
+  AbieMagn |   1                |    N    |    483 |   1100 |                  1257 |  1700       |            -10  |     0.87  |    8        |        N
+  PinuCont |   1                |    N    |    276 |   500  |                  1230 |  1300       |            -18  |     0.87  |    3.5       |       N
+  PinuMont |   1                |    N    |    155 |   500  |                  1220 |  1800       |            -18  |     0.82  |    7        |        N
+  TsugMert |   1                |    N    |    235 |   500  |                  1200 |  1400       |            -18  |     0.8   |    4.5       |       Y
+  PinuAlbi |   1                |    N    |    230 |   300  |                  1205 |  1200       |            -18  |     0.9   |    5.5        |      Y
+  PopuTrem |   2                |    N    |    600 |   600  |                  3000 |  3000       |            -10  |     0.82  |    1           |     Y
+  NonnResp |   3                |    N    |    400 |   400  |                  4000 |  4000       |            -10  |     0.99  |    1.5          |    Y
+  NonnSeed |   3                |    N    |    400 |   400  |                  4000 |  4000       |            -10  |     0.97  |    1.5        |      N
+  FixnResp |   3                |    Y    |    400 |  400   |                 4000  | 4000        |           -10   |    0.97   |   1.5          |    Y
+  FixnSeed |   3                |    Y    |    400 |   400  |                  4000 |  4000       |            -10  |     0.99  |    1.5          |    N
 
 References:
 
@@ -394,8 +388,7 @@ values from 1992-2013 back into our fitted equation for lightning
 ignitions, to attempt to mimic the historical ignitions data used to fit
 the equation.
 
-![](media/image2.png){width="4.301499343832021in"
-height="4.463542213473316in"}
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/PLI_LTB.png>
 
 *Figure 1: Example of predicted lightning ignitions per day for 16 years
 of historical FWI data using SCRAPPLE method.*
@@ -437,7 +430,7 @@ calibrated each ignition type such that the spatial patterns of fire
 ignitions provided by the input maps match the spatial patterns of fire
 ignitions by type in the output maps.
 
-[]{#_Toc534465853 .anchor}2. Fire Spread (Growth)\
+2. Fire Spread (Growth)
 From the point of ignition, fire spreads. Fire can spread to each
 adjacent cell dependent upon a probability of spread (Pspread) to
 adjacent neighbor (out of four nearest neighbors). Fire spread is from
@@ -479,8 +472,7 @@ Maximum area is determined empirically:
 Maximum daily spread area = β0 + β1 \* FWI + β2\*EffectiveWindSpeed
 Equation 4
 
-![](media/image3.png){width="3.3489588801399823in"
-height="3.4127482502187227in"}
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/v_area_spread.png/>
 
 *Figure 2: Daily fire spread area (ha) and daily wind speed velocity.
 Daily fire spread within SCRAPPLE is a function of both daily wind speed
@@ -518,8 +510,7 @@ being broadly representative of the conditions found in the LTB, there
 are many more fires (larger sample size), and fires in the area are
 typically not extensively suppressed due to the rugged terrain.
 
-![](media/image4.jpg){width="3.244792213473316in"
-height="3.249991251093613in"}
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/GS_AnalysisArea.png/>
 
 *Figure 3: Sierra Nevada analysis area for generating fire extension
 parameters for the Lake Tahoe West project, outlined in black. Green
@@ -528,13 +519,13 @@ areas represent Forest Service administrative boundaries.*
 Table 1. The following data sources were used to parameterize Lake Tahoe
 West.
 
-  Data                              Source
-  --------------------------------- ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-  Daily fire perimeters             GEOMAC from all available years (2000-2016). Data required preprocessing, which included year-to-year attribute name standardization, date convention standardization, geographic coordinate standardization, removal of blank or missing records, elimination of duplicate record days, elimination of days with 'negative' fire spread, etc [[https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/historic\_fire\_data/]{.underline}](https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/historic_fire_data/)
-  Fire Weather Index (FWI), Daily   Daily FWI was calculated using equations internal to the Climate Library (Lucash et al. 2017). Climate data used was Mauer daily gridded historical climate data available through the USGS GeoDataPortal. [<https://cida.usgs.gov/gdp/>.]{.underline} The climate data was produced for EPA level II ecoregions, which was then resampled into 30mx30m pixels to make it consistent with all other input maps.
-  Fine fuel loads                   Fine fuel load maps were developed using LANDFIRE cover types and the associated fuel loading information (Reeves etal 2006) [[https://www.landfire.gov/documents/FuelProceedings.pdf]{.underline}](https://www.landfire.gov/documents/FuelProceedings.pdf)
-  Daily wind speed                  Daily wind speed data used were summarized by the USGS GeoDataPortal, using the same EPA region mapping approach and resolution resampling as the FWI data.
-  Daily wind direction              Because a continuous surface of historical daily wind direction is not available, we estimated wind direction as the direction of fire spread; daily fire polygon centroid-to-centroid azimuth was used as daily wind direction. Wind direction is not a direct input to fire spread, but rather is included in the effective wind speed calculation.
+Data | Source
+-----------|-------------
+ Daily fire perimeters | GEOMAC from all available years (2000-2016). Data required preprocessing, which included year-to-year attribute name standardization, date convention standardization, geographic coordinate standardization, removal of blank or missing records, elimination of duplicate record days, elimination of days with 'negative' fire spread, etc <(https://rmgsc.cr.usgs.gov/outgoing/GeoMAC/historic_fire_data/>
+  Fire Weather Index (FWI), Daily | Daily FWI was calculated using equations internal to the Climate Library (Lucash et al. 2017). Climate data used was Mauer daily gridded historical climate data available through the USGS GeoDataPortal. [<https://cida.usgs.gov/gdp/>.]{.underline} The climate data was produced for EPA level II ecoregions, which was then resampled into 30mx30m pixels to make it consistent with all other input maps.
+  Fine fuel loads  | Fine fuel load maps were developed using LANDFIRE cover types and the associated fuel loading information (Reeves etal 2006) [[https://www.landfire.gov/documents/FuelProceedings.pdf]{.underline}](https://www.landfire.gov/documents/FuelProceedings.pdf)
+  Daily wind speed  | Daily wind speed data used were summarized by the USGS GeoDataPortal, using the same EPA region mapping approach and resolution resampling as the FWI data.
+  Daily wind direction | Because a continuous surface of historical daily wind direction is not available, we estimated wind direction as the direction of fire spread; daily fire polygon centroid-to-centroid azimuth was used as daily wind direction. Wind direction is not a direct input to fire spread, but rather is included in the effective wind speed calculation.
 
 After the raster data were processed for extent and resolution,
 successful and unsuccessful spread cells were extracted based on daily
@@ -545,7 +536,7 @@ distribution. This modified form creates a 0-1 probability function
 which is then applied at a daily time step to determine the success of
 cell-to-cell fire transmission.
 
-*2.1 Suppression*\
+*2.1 Suppression*
 Suppression accounts for the capacity to reduce the rare, or probability
 of fire spread and is unique for each fire type. Suppression is
 implemented as four zones per fire type: none, minimal, moderate,
@@ -570,8 +561,7 @@ Agency). We used the Threat and Defense Zone to identify three levels of
 suppression ranging from highly (\~95%), moderately (\~65%), and very
 low suppression (\~5%).
 
-![I:\\SNPLMA3\\Analysis\\Graphs\\suppressionzones.jpg](media/image5.jpeg){width="2.9882305336832897in"
-height="4.104166666666667in"}
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/SUPPRESSION_TFFP.png/>
 
 One known issue was that the scenario designers wanted a \"paint the
 corners\" approach to fire management. However, the same level of
@@ -611,7 +601,7 @@ historical fire intensity were created by assigning historical fires one
 of the three fire intensity classes described above and extracting the
 fuel loading data that corresponded to that fire (data from Forest
 Service Region 5 GeoSpatial Information Center
-[[https://www.fs.usda.gov/detail/r5/landmanagement/gis/?cid=STELPRDB5327833]{.underline}](https://www.fs.usda.gov/detail/r5/landmanagement/gis/?cid=STELPRDB5327833)).
+<https://www.fs.usda.gov/detail/r5/landmanagement/gis/?cid=STELPRDB5327833>.
 Fire intensity data is drawn from the same broad Sierra Nevada geography
 as spread parameters, avoiding potential sampling bias towards small
 high intensity fires which are most prominent in the Basin.
@@ -632,58 +622,13 @@ expert opinion approach whereby five fire experts for the LTB provided
 estimates of mortality for varying species and age combinations. These
 data were collected independently and collated and areas of disagreement
 (indicated by high variance among experts) discussed and refined. See
-the following table for mortality values by species-age class.
+the following link for the table of mortality values by species-age class: <https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/SCRAPPLE_LTW.txt>.
 
-             Fire Severity Class 1   Fire Severity Class 2   Fire Severity Class 3                                                                                                                 
-  ---------- ----------------------- ----------------------- -------------------------- ------------------- ------------------- -------------------------- ------------------- ------------------- --------------------------
-  Species    Age (lower bound)       Age (upper bound)       Probability of Mortality   Age (lower bound)   Age (upper bound)   Probability of Mortality   Age (lower bound)   Age (upper bound)   Probability of Mortality
-  PinuJeff   0                       40                      0.45                       0                   40                  0.6                        0                   40                  0.9
-  PinuJeff   40                      80                      0.1                        40                  80                  0.25                       40                  80                  0.8
-  PinuJeff   80                      500                     0.05                       80                  500                 0.15                       80                  500                 0.7
-  PinuLamb   0                       40                      0.45                       0                   40                  0.7                        0                   40                  0.9
-  PinuLamb   40                      80                      0.1                        40                  80                  0.2                        40                  80                  0.8
-  PinuLamb   80                      500                     0.05                       80                  500                 0.1                        80                  500                 0.6
-  CaloDecu   0                       40                      0.5                        0                   40                  0.75                       0                   40                  0.9
-  CaloDecu   40                      80                      0.15                       40                  80                  0.2                        40                  80                  0.7
-  CaloDecu   80                      500                     0.1                        80                  500                 0.1                        80                  500                 0.5
-  AbieConc   0                       40                      0.6                        0                   40                  0.8                        0                   40                  0.99
-  AbieConc   40                      80                      0.15                       40                  80                  0.4                        40                  80                  0.75
-  AbieConc   80                      450                     0.05                       80                  450                 0.2                        80                  450                 0.8
-  AbieMagn   0                       40                      0.6                        0                   40                  0.8                        0                   40                  0.99
-  AbieMagn   40                      80                      0.15                       40                  80                  0.25                       40                  80                  0.75
-  AbieMagn   80                      500                     0.05                       80                  500                 0.1                        80                  500                 0.8
-  PinuCont   0                       30                      0.6                        0                   30                  0.85                       0                   30                  0.99
-  PinuCont   30                      70                      0.35                       30                  70                  0.7                        30                  70                  0.95
-  PinuCont   70                      250                     0.25                       70                  250                 0.6                        70                  250                 0.9
-  PinuMont   0                       40                      0.55                       0                   40                  0.77                       0                   40                  0.9
-  PinuMont   40                      80                      0.15                       40                  80                  0.3                        40                  80                  0.75
-  PinuMont   80                      550                     0.1                        80                  550                 0.25                       80                  550                 0.6
-  TsugMert   0                       30                      0.6                        0                   30                  0.8                        0                   30                  0.9
-  TsugMert   30                      70                      0.2                        30                  70                  0.5                        30                  70                  0.75
-  TsugMert   70                      800                     0.1                        70                  800                 0.3                        70                  800                 0.6
-  PinuAlbi   0                       30                      0.65                       0                   30                  0.8                        0                   30                  0.97
-  PinuAlbi   30                      70                      0.3                        30                  70                  0.5                        30                  70                  0.8
-  PinuAlbi   70                      900                     0.1                        70                  900                 0.4                        70                  900                 0.7
-  PopuTrem   0                       30                      0.5                        0                   30                  0.9                        0                   30                  0.99
-  PopuTrem   30                      70                      0.3                        30                  70                  0.7                        30                  70                  0.95
-  PopuTrem   70                      175                     0.1                        70                  175                 0.6                        70                  175                 0.9
-  NonnResp   0                       10                      0.6                        0                   10                  1                          0                   10                  1
-  NonnResp   10                      40                      0.7                        10                  40                  1                          10                  40                  1
-  NonnResp   40                      80                      0.8                        40                  80                  1                          40                  80                  1
-  NonnSeed   0                       10                      0.6                        0                   10                  1                          0                   10                  1
-  NonnSeed   10                      40                      0.7                        10                  40                  1                          10                  40                  1
-  NonnSeed   40                      80                      0.8                        40                  80                  1                          40                  80                  1
-  FixnResp   0                       10                      0.6                        0                   10                  1                          0                   10                  1
-  FixnResp   10                      40                      0.7                        10                  40                  1                          10                  40                  1
-  FixnResp   40                      80                      0.8                        40                  80                  1                          40                  80                  1
-  FixnSeed   0                       10                      0.6                        0                   10                  1                          0                   10                  1
-  FixnSeed   10                      40                      0.7                        10                  40                  1                          10                  40                  1
-  FixnSeed   40                      80                      0.8                        40                  80                  1                          40                  80                  1
-
+ 
 Harvest
 =======
 
-**Scenarios are based solely on west shore for acres**
+Scenarios are based solely on west shore for acres
 
 -   While scenario acreage targets are based on LTW only, percent of
     acres within LTW compared to the entire Lake Tahoe Basin are very
@@ -692,7 +637,7 @@ Harvest
     percentage of general forest -- especially in steep slopes compared
     to LTW (see appendix A).
 
-**[Stand Delineation ]{.underline}**
+**Stand Delineation **
 
 -   Everything over 116 ha (\~7062 total ha) were split into smaller
     polygons at maximum of 116 -- keeping larger end
@@ -703,7 +648,7 @@ Harvest
 -   Final stand delineation based on CWHR types and slope classes (0-30,
     30-50, 50-70, \>70%)
 
-**[Management Zones]{.underline}**
+**Management Zones**
 
 -   Management zones were developed using the stand delineation and
     treatment available (treatment available was based on distance from
@@ -720,41 +665,43 @@ Harvest
     feet and 0.5 miles if the polygon was completely within that
     distance of the road.
 
-**[KNOWN ISSUES:]{.underline}**
+
+**Scenario 4**
+Management Zones:
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/MgmtZone_Scen3.tif>
+
+Stands:
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/scen3_mgmt_areas_3ha.tif>
+
+
+*KNOWN ISSUES:*
 
 These were issues found in the original parameterization. Fixes were
 either incorporated into existing model runs or left for the next model
 round.
 
-1.  **[SALVAGE LOGGING]{.underline}**
+1.  *SALVAGE LOGGING*
 
-    [GOAL:]{.underline}
-
-    a.  Salvage is a priority over live thinning and occurs in both WUI
+    a.  GOAL: Salvage is a priority over live thinning and occurs in both WUI
         Defense and WUI Threat. 90% of the area that experienced a high
         mortality event (from either fire or insects) would be salvaged
         prior to new live thinning occurring. 40% of the salvaged area
         would be replanted with: 80% Jeffrey pine, 10% cedar, 5% red
         fir, 5% sugar pine.
 
-        [WHAT HAPPENED:]{.underline}
-
-    b.  Salvage logging was NOT implemented as expected. However, it
+    b.  WHAT HAPPENED: Salvage logging was NOT implemented as expected. However, it
         could be added in the next round. Replanting did NOT occur. Note
         that the materials harvested do not appear within the harvest
         log file. Instead, they show as a reduction in the deadwood pool
         maps from the NECN extension.
 
-2.  **[STAND RE-ENTRY]{.underline}**
+2.  *STAND RE-ENTRY*
 
-    [GOAL:]{.underline}
-
-    c.  Re-entry after harvest or disturbance was to be set at the
+    c.  GOAL: Re-entry after harvest or disturbance was to be set at the
         dominant mean FRI types for each management zone.
 
-        [WHAT HAPPENED:]{.underline}
-
-    d.  Stands were re-entered more than expected. MinTimeSinceDamage
+        
+    d.  WHAT HAPPENED: Stands were re-entered more than expected. MinTimeSinceDamage
         was the only restriction used when MinTimeSinceHarvest should
         also have been used. Additional replicates were run with the
         fixes:
@@ -768,16 +715,12 @@ round.
         young cohorts were wiped out. There were also fewer harvest
         events that resulted in nothing coming off the landscape.
 
-3.  **[HARVEST RESIDUES:]{.underline}**
+3.  *HARVEST RESIDUES*
 
-    [GOAL:]{.underline}
-
-    f.  60% of hand thinning and 80% of mechanical thinning woody
+    f.  GOAL: 60% of hand thinning and 80% of mechanical thinning woody
         residue to be harvested.
 
-        [WHAT HAPPENED:]{.underline}
-
-    g.  Only 5% of woody harvest residues were removed. Additional
+    g.  WHAT HAPPENED: Only 5% of woody harvest residues were removed. Additional
         replicates were run with the corrected harvest targets.
 
 SCENARIO 1
@@ -832,20 +775,25 @@ There are five management zones in this scenario.
 
 -   N/A: This is the area within the defense and threat zones that
     cannot be treated because the slope is greater than 70%.
+    
+Management Zones Map:
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_focused/Mgmt_zone_WUI_focus.tif>
+
+Stands:
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_focused/mgmt_areas_scen2_2ha.tif>    
 
 Table 1: Management zones for scenario 2 based on management area plus
 treatment type, with annual acres and percentage treated and total
 available acres to treat in the zone.
 
-  **Management Area**   **Treatment**   **Treatment Allocation By Zone**   **Annual Treatment Acres**   **Total Annual Acres**   **Total Acres Available **
-  --------------------- --------------- ---------------------------------- ---------------------------- ------------------------ ----------------------------
-  WUI Defense Zone      Mechanical      20%                                150                          750                      6545
-                        Hand            80%                                600                                                   10189
-  WUI Threat Zone       Mechanical      20%                                50                           250                      2512
-                        Hand            80%                                200                                                   12217
-  General Forest        No treatment    0                                  0                            0                        27025
-  Wilderness                                                                                                                     
-  NA                    NA              0                                  0                            0                        89
+  **Management Area** |  **Treatment**  | **Treatment Allocation By Zone**  | **Annual Treatment Acres**  | **Total Annual Acres**  | **Total Acres Available **
+  ---------------------|---------------|----------------------------------|----------------------------|------------------------|----------------------------
+  WUI Defense Zone |  Mechanical | 20% |  150 | 750 | 6545
+                   |  Hand | 80% | 600 | 10189
+  WUI Threat Zone | Mechanical | 20% | 50 | 250 | 2512
+                  | Hand  |  80%  | 200 | 12217
+  General Forest | No treatment | 0 | 0 | 0 | 27025
+  Wilderness | NA | NA | 0 | 0 | 0 | 89
 
 *Acre targets*
 
@@ -871,12 +819,12 @@ Table 2: Historic LTB data identifying hectares treated per year defined
 by target area (Lake Tahoe West, CA, and NV broken out between defense
 and threat zones).
 
-  **Zone**                              **LTW-Defense**   **LTW-Threat**   **LTW-General**   **CA-Defense**   **CA-Threat**   **CA-General**   **NV-Defense**   **NV-Threat**   **NV-General**
-  ------------------------------------- ----------------- ---------------- ----------------- ---------------- --------------- ---------------- ---------------- --------------- ----------------
-  **Code\***                            8                 7                9                 5                4               6                2                1               3
-  **Hectares**                          6865              6117             10846             14335            7634            17437            7652             6001            7748
-  **Mean treated area /yr (ha)**        216.3             101.96           0                 283.05           34.1            0                193.7            112.3           0
-  **Percentage of each zone treated**   68.0              32.0             0.0               89.2             0.1             0.0              63.3             36.7            0.0
+  **Zone** | **LTW-Defense** | **LTW-Threat** | **LTW-General** | **CA-Defense** | **CA-Threat** | **CA-General** | **NV-Defense** | **NV-Threat** | **NV-General**
+  -------------------------------------|-----------------|----------------|-----------------|----------------|---------------|----------------|----------------|--------------- ----------------
+  **Code\** | 8 | 7 | 9 | 5  | 4 | 6 | 2 | 1 | 3
+  **Hectares** | 6865 | 6117  | 10846 | 14335 | 7634 | 17437 | 7652 |  6001 |  7748
+  **Mean treated area /yr (ha)** | 216.3 | 101.96 | 0 | 283.05 | 34.1 |  0 | 193.7 | 112.3 | 0
+  **Percentage of each zone treated** | 68.0  | 32.0 |  0.0  | 89.2 | 0.1 | 0.0 |  63.3 | 36.7 |  0.0
 
 *Biomass Targets*
 
@@ -887,19 +835,19 @@ biomass is removed during thinning operations.
 Table 3: Percent of live species removed by size classes using
 mechanical thinning for scenario 2.
 
-  **Mechanical**   IC      JP     LP      SP     WF/RF   Total % Size Class
-  ---------------- ------- ------ ------- ------ ------- --------------------
-  \<10             10.71   9.54   39.37   4.20   29.17   93.00
-  10-12            8.07    7.19   29.67   3.16   21.98   70.07
-  12-14            7.54    6.71   27.70   2.95   20.52   65.43
-  14-16            6.58    5.86   24.19   2.58   17.92   57.14
-  16-18            5.18    4.62   19.05   2.03   14.12   45.00
-  18-20            3.70    3.30   13.61   1.45   10.08   32.14
-  20-22            2.63    2.35   9.68    1.03   7.17    22.86
-  22-24            2.01    1.79   7.38    0.79   5.47    17.43
-  24-26            1.48    1.32   5.44    0.58   4.03    12.86
-  26-28            0.89    0.79   3.27    0.35   2.42    7.71
-  28-30            0.49    0.44   1.81    0.19   1.34    4.29
+  **Mechanical**  | IC    | JP   | LP    | SP   | WF/RF | Total % Size Class
+  ----------------|-------|------|-------|------|-------|--------------------
+  \<10            | 10.71 | 9.54  | 39.37 |  4.20 |  29.17 |   93.00
+  10-12           | 8.07  | 7.19  | 29.67 |  3.16 |  21.98 |   70.07
+  12-14           | 7.54  | 6.71  | 27.70 |  2.95 |  20.52 |  65.43
+  14-16           | 6.58  | 5.86  | 24.19 |  2.58 |  17.92 |   57.14
+  16-18           | 5.18  | 4.62  | 19.05 |  2.03 |  14.12 |  45.00
+  18-20           | 3.70  | 3.30  | 13.61 |  1.45 |  10.08 |   32.14
+  20-22           | 2.63  | 2.35  | 9.68  |  1.03 |  7.17 |   22.86
+  22-24           | 2.01  | 1.79  | 7.38  |  0.79 |  5.47 |   17.43
+  24-26           | 1.48  | 1.32  | 5.44  |  0.58 |  4.03 |   12.86
+  26-28           | 0.89  | 0.79  | 3.27  |  0.35 |  2.42 |   7.71
+  28-30           | 0.49  | 0.44  | 1.81  |  0.19 |  1.34 |   4.29
 
 DBH was cross-walked to age using methods developed by Angela White
 (USFS). Biomass reductions were set equal to the 'Total % Size class'
@@ -907,22 +855,22 @@ reductions above, assuming that species differences would be determined
 by the community at a given treated site. \*\*IC: incense cedar, JP:
 Jeffrey pine, SP: sugar pine, WF/RF: white fir and red fir combined
 
-[Hand thinning]{.underline} can occur on slopes up to 70% slopes. 60% of
+Hand thinning can occur on slopes up to 70% slopes. 60% of
 dead biomass removed during thinning operations
 
 Table 4: Percent of live species removed by size classes using hand
 thinning for scenario 2 and 3.
 
-  **Hand Thin**   IC     JP     LP      SP     WF/RF   Total % Size Class
-  --------------- ------ ------ ------- ------ ------- --------------------
-  \<10            7.60   6.77   27.94   2.98   20.70   66.00
-  10-12           4.44   3.96   16.33   1.74   12.10   38.57
-  12-14           4.44   3.96   16.33   1.74   12.10   38.57
+  **Hand Thin**  | IC   |  JP |    LP   |   SP  |   WF/RF |  Total % Size Class
+  ---------------|------|------|-------|------|-------|--------------------
+  \<10        |   7.60 | 6.77 | 27.94 | 2.98 | 20.70 | 66.00
+  10-12       |   4.44 | 3.96 | 16.33 | 1.74 | 12.10 | 38.57
+  12-14       |   4.44 | 3.96 | 16.33 | 1.74 | 12.10 | 38.57
 
 \*\*IC: incense cedar, JP: Jeffrey pine, SP: sugar pine, WF/RF: white
 fir and red fir combined
 
-[Suppression]{.underline} occurs at 100% in all areas regardless of
+Suppression occurs at 100% in all areas regardless of
 management zone.
 
 SCENARIO 3: WUI Extended
@@ -956,7 +904,7 @@ re-entered after 11 years post disturbance (post-disturbance includes
 thinning treatments, wildfire, and salvage) which is based on the
 dominant mean fire return interval for the landscape (see Appendix D).
 
-*Management Zones *
+*Management Zones*
 
 There are 11 management zones in this scenario.
 
@@ -1008,24 +956,31 @@ There are 11 management zones in this scenario.
 
 -   N/A: This is the area within the broader area with a slope greater
     than 70% than cannot be treated.
+    
+Management Zones:
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/MgmtZone_Scen3.tif>
+
+Stands:
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/scen3_mgmt_areas_3ha.tif>
+    
 
 Table 5: Management zones for scenario 3 based on management area plus
 treatment type, with annual acres and percentage treated and total
 available acres to treat in the zone.
 
-  **Management Area**   **Treatment\***   **Treatment Allocation By Zone**   **Annual Treatment Acres**   **Total Annual Acres**   **Total Acres Available **
-  --------------------- ----------------- ---------------------------------- ---------------------------- ------------------------ ----------------------------
-  WUI Defense           G Mechanical      44                                 794                          1800                     7386
-                        A Mechanical      3                                  59                                                    544
-                        Hand              53                                 947                                                   8804
-  WUI Threat            G Mechanical      23                                 226                          1000                     3326
-                        A Mechanical      3                                  25                                                    369
-                        Hand              75                                 749                                                   11034
-  General Forest        G Mechanical      8                                  83                           1000                     1130
-                        A Mechanical      11                                 113                                                   1551
-                        Hand              80                                 804                                                   10983
-  Wilderness            Hand              100                                200                          200                      12773
-  NA                    NA                100                                0                            0                        677
+  **Management Area** | **Treatment\*** | **Treatment Allocation By Zone** | **Annual Treatment Acres** | **Total Annual Acres** | **Total Acres Available **
+  ---------------------|-----------------|----------------------------------|----------------------------|------------------------|----------------------------
+  WUI Defense     |     G Mechanical  |   44    |                             794             |            1800         |              7386
+                  |     A Mechanical  |    3    |                              59             |                         |              544
+                  |     Hand          |    53   |                              947            |                         |              8804
+  WUI Threat      |     G Mechanical  |    23   |                              226            |              1000       |              3326
+                  |     A Mechanical  |    3    |                              25             |                         |              369
+                  |     Hand          |    75   |                              749            |                         |              11034
+  General Forest  |     G Mechanical  |    8    |                              83             |              1000       |              1130
+                  |     A Mechanical  |    11   |                              113            |                         |              1551
+                  |     Hand          |    80   |                              804            |                         |              10983
+  Wilderness      |     Hand          |    100  |                              200            |              200        |              12773
+  NA              |     NA            |    100  |                              0              |              0          |              677
 
 \*G stands for ground based mechanical and A stands for aerial based
 mechanical
@@ -1049,7 +1004,7 @@ total model runs from 10 to 7.
 
 *Biomass Targets*
 
-[Mechanical thinning]{.underline}
+Mechanical thinning
 
 Ground based treatments can occur on up to 50% slope and up to 1000 ft
 from existing road. 80% of dead biomass is removed during thinning
@@ -1071,65 +1026,65 @@ removed during thinning operations.
 Table 6: Total acres by slope class for each management area within 1000
 feet of a road.
 
-  **Within a 1000ft of a Road**   **Acres**
-  ------------------------------- ------------
-  **General Forest**              **3,894**
-  \>70%                           175
-  0-30%                           2,023
-  30-40%                          591
-  40-45%                          193
-  45-50%                          206
-  50-70%                          704
-  N/A                             2
-  **WUI - Defense**               **14,521**
-  \>70%                           295
-  0-30%                           10,535
-  30-40%                          1,356
-  40-45%                          446
-  45-50%                          454
-  50-70%                          1,365
-  N/A                             71
-  **WUI - Threat**                **10,647**
-  \>70%                           159
-  0-30%                           7,415
-  30-40%                          1,431
-  40-45%                          390
-  45-50%                          375
-  50-70%                          854
-  N/A                             23
-  **Grand Total**                 **29,062**
+  **Within a 1000ft of a Road** | **Acres**
+  -------------------------------|------------
+  **General Forest**        |     **3,894**
+  \>70%                     |     175
+  0-30%                     |     2,023
+  30-40%                    |     591
+  40-45%                    |     193
+  45-50%                    |     206
+  50-70%                    |     704
+  N/A                       |      2
+  **WUI - Defense**         |      **14,521**
+  \>70%                     |      295
+  0-30%                     |      10,535
+  30-40%                    |      1,356
+  40-45%                    |      446
+  45-50%                    |      454
+  50-70%                    |      1,365
+  N/A                       |      71
+  **WUI - Threat**          |      **10,647**
+  \>70%                     |      159
+  0-30%                     |      7,415
+  30-40%                    |      1,431
+  40-45%                    |      390
+  45-50%                    |      375
+  50-70%                    |      854
+  N/A                       |      23
+  **Grand Total**           |      **29,062**
 
 Table 7: Percent of live species removed by size classes using
 mechanical thinning for scenario 3 with no tree greater than 38" DBH
 being removed (Appendix B).
 
-  **Populated Species/Size Class**   IC      JP     LP      SP     WF/RF   Total % Size Class
-  ---------------------------------- ------- ------ ------- ------ ------- --------------------
-  \<10                               10.95   9.75   40.22   4.29   29.80   95.00
-  10-12                              10.95   9.75   40.22   4.29   29.80   95.00
-  12-14                              9.79    8.72   35.99   3.83   26.66   85.00
-  14-16                              9.79    8.72   35.99   3.83   26.66   85.00
-  16-18                              9.79    8.72   35.99   3.83   26.66   85.00
-  18-20                              8.64    7.70   31.75   3.38   23.53   75.00
-  20-22                              8.06    7.18   29.64   3.16   21.96   70.00
-  22-24                              6.91    6.16   25.40   2.71   18.82   60.00
-  24-26                              4.03    3.59   14.82   1.58   10.98   35.00
-  26-28                              2.30    2.05   8.47    0.90   6.27    20.00
-  28-30                              1.15    1.03   4.23    0.45   3.14    10.00
-  30-32                              1.15    1.03   4.23    0.45   3.14    10.00
-  32-34                              1.15    1.03   4.23    0.45   3.14    10.00
-  34-36                              1.15    1.03   4.23    0.45   3.14    10.00
-  36-38                              0.58    0.51   2.12    0.23   1.57    5.00
+  **Populated Species/Size Class** | IC   |  JP  |  LP   |  SP  |  WF/RF | Total % Size Class
+  ----------------------------------|-------|------|-------|------|-------|--------------------
+  \<10                            |  10.95|  9.75 | 40.22 | 4.29 | 29.80 | 95.00
+  10-12                           |  10.95|  9.75 | 40.22 | 4.29 | 29.80 | 95.00
+  12-14                           |  9.79 |  8.72 | 35.99 | 3.83 | 26.66 | 85.00
+  14-16                           |  9.79 |  8.72 | 35.99 | 3.83 | 26.66 | 85.00
+  16-18                           |  9.79 |  8.72 | 35.99 | 3.83 | 26.66 | 85.00
+  18-20                           |  8.64 |  7.70 | 31.75 | 3.38 | 23.53 | 75.00
+  20-22                           |  8.06 |  7.18 | 29.64 | 3.16 | 21.96 | 70.00
+  22-24                           |  6.91 |  6.16 | 25.40 | 2.71 | 18.82 | 60.00
+  24-26                           |  4.03 |  3.59 | 14.82 | 1.58 | 10.98 | 35.00
+  26-28                           |  2.30 |  2.05 | 8.47  | 0.90 | 6.27 |  20.00
+  28-30                           |  1.15 |  1.03 | 4.23  | 0.45 | 3.14 |  10.00
+  30-32                           |  1.15 |  1.03 | 4.23  | 0.45 | 3.14 |  10.00
+  32-34                           |  1.15 |  1.03 | 4.23  | 0.45 | 3.14 |  10.00
+  34-36                           |  1.15 |  1.03 | 4.23  | 0.45 | 3.14 |  10.00
+  36-38                           |  0.58 |  0.51 | 2.12  | 0.23 | 1.57 |  5.00
 
 \*IC: incense cedar, JP: Jeffrey pine, SP: sugar pine, WF/RF: white fir
 and red fir combined
 
-[Hand thinning]{.underline} occurs in all management zones on slopes up
+Hand thinning occurs in all management zones on slopes up
 to 70%. Total biomass removal will stay at 8% and be same species
 removal ratios as scenario 2 (Table 4) because it is not feasible to
 remove more material by hand across the landscape.
 
-[Suppression]{.underline} occurs at 100% in all areas regardless of
+Suppression occurs at 100% in all areas regardless of
 management zone.
 
 SCENARIO 4: WUI Extended Rx Focus
@@ -1185,14 +1140,14 @@ Table 8: Scenario 4 management zones based on management area plus
 treatment type, with annual acres and percentage treated and total
 available acres to treat in the zone.
 
-  **Management Area**   **Treatment**     **Treatment Allocation By Zone**   **Annual Treatment Acres**   **Total Annual Acres**   **Total Acres Available **   **Target Acres Fire**
-  --------------------- ----------------- ---------------------------------- ---------------------------- ------------------------ ---------------------------- -----------------------
-  WUI Defense Zone      Mechanical/Burn   20%                                150                          750                      6545                         410
-                        Hand/Burn         80%                                600                                                   10189                        640
-  WUI Threat            Burn Only         0                                  0                            0                        14751                        1000
-  General Forest        Burn Only         0                                  0                            0                        13729                        1000
-  Wilderness            Burn Only         0                                  0                            0                        13296                        200
-  NA                    NA                NA                                 0                            0                        67                           0
+  **Management Area** | **Treatment**  |  **Treatment Allocation By Zone** | **Annual Treatment Acres** | **Total Annual Acres** | **Total Acres Available ** | **Target Acres Fire**
+  ---------------------|----------------|----------------------------------|----------------------------|------------------------|----------------------------|-----------------------
+  WUI Defense Zone | Mechanical/Burn | 20% | 150 | 750 | 6545 | 410
+                   |  Hand/Burn | 80% | 600  | 10189 | 640
+  WUI Threat       |    Burn Only | 0  |  0 |  0 |  14751 | 1000
+  General Forest   |    Burn Only | 0 | 0 | 0 | 13729 | 1000
+  Wilderness       |    Burn Only | 0 | 0 | 0 | 13296 | 200
+  NA               |    NA |  NA  | 0 |  0 | 67 | 0
 
 *Acre targets*
 
@@ -1212,24 +1167,18 @@ available acres to treat in the zone.
 
 *Biomass Targets*
 
-[Mechanical thinning]{.underline} is ground based only and can occur in
+Mechanical thinning is ground based only and can occur in
 the WUI defense on up to 30% slope and up to 1000 ft from existing road.
 80% of dead biomass is removed during thinning operations. See table 3
 for the percent of live species removed by size classes using mechanical
 thinning.
 
-[Hand thinning]{.underline} can occur on slopes up to 70% slopes in the
+Hand thinning can occur on slopes up to 70% slopes in the
 WUI defense. 60% of dead biomass removed during thinning operations. See
 table 4 for percent of live species removed by size classes using hand
 thinning.
 
-[Salvage]{.underline} is a priority over live thinning and occurs in WUI
-Defense. 90% of the area that experienced a high mortality event (from
-either fire or insects) would be salvaged prior to new live thinning
-occurring. 40% of the salvaged area would be replanted with: 80% Jeffrey
-pine, 10% cedar, 5% red fir, 5% sugar pine.
-
-[Suppression]{.underline} occurs at 100% only in WUI defense. The other
+Suppression occurs at 100% only in WUI defense. The other
 zones have managed wildfire during specific fire weather windows to meet
 total acreage targets of fire in other zones.
 
@@ -1264,7 +1213,7 @@ be provided based on maximum prescription fire intensity which are tied
 to mortality values by age and species. Theoretically it is possible to
 have an escaped fire, however Alec has not been able to make it happen.
 
-[Prescribed Fire Parameters]{.underline}
+*Prescribed Fire Parameters*
 
 -   MaximumRxWindSpeed 8.0
 
@@ -1338,197 +1287,34 @@ with increasing vulnerability as the trees aged.
 
 Table 1
 
-                        Fir Engraver     Jeffrey Pine Beetle   Mountain Pine Beetle
-  --------------------- ---------------- --------------------- ----------------------
-  Pattern               Cyclic Uniform   Cyclic Uniform        Cyclic Uniform
-  Min interval          10               10                    10
-  Max interval          25               25                    25
-  Min time since        5                5                     5
-  NeighborhoodFlag      No               No                    Yes
-  NeighborhoodSpeedUp   None             None                  2x
-  Radius                10,000m          10,000m               2,000m
-  Shape                 Uniform          Uniform               Uniform
-  Weight                20               20                    20
-  Dispersal Rate        1000m/yr         400m/yr               600m/yr
-  Epidemic Threshold    0.01             0.01                  0.01
-  Seed Epicenter        Yes              Yes                   Yes
-  Seed Epicenter Coef   0.01             0.01                  0.01
-  Dispersal Template    MaxRadius        MaxRadius             MaxRadius
+                       | Fir Engraver   | Jeffrey Pine Beetle | Mountain Pine Beetle
+  ---------------------|----------------|---------------------|----------------------
+  Pattern           |   Cyclic Uniform | Cyclic Uniform   |    Cyclic Uniform
+  Min interval      |   10             | 10               |    10
+  Max interval      |   25             | 25               |    25
+  Min time since    |   5              | 5                |    5
+  NeighborhoodFlag  |   No             | No               |    Yes
+  NeighborhoodSpeedUp | None           | None             |    2x
+  Radius             |  10,000m        | 10,000m          |    2,000m
+  Shape              |  Uniform        | Uniform          |    Uniform
+  Weight             |  20             | 20               |    20
+  Dispersal Rate     |  1000m/yr       | 400m/yr          |    600m/yr
+  Epidemic Threshold |  0.01           | 0.01             |    0.01
+  Seed Epicenter     |  Yes            | Yes              |    Yes
+  Seed Epicenter Coef | 0.01           | 0.01             |    0.01
+  Dispersal Template  | MaxRadius      | MaxRadius        |    MaxRadius
 
 Table 2
 
-<table>
-<thead>
-<tr class="header">
-<th><blockquote>
-<p>Agent</p>
-</blockquote></th>
-<th><blockquote>
-<p>Species Name</p>
-</blockquote></th>
-<th><blockquote>
-<p>Minor Host Age</p>
-</blockquote></th>
-<th><blockquote>
-<p>SRDProb</p>
-</blockquote></th>
-<th><blockquote>
-<p>2nd Host Age</p>
-</blockquote></th>
-<th><blockquote>
-<p>SRDProb</p>
-</blockquote></th>
-<th><blockquote>
-<p>Major Host Age</p>
-</blockquote></th>
-<th><blockquote>
-<p>SRDProb</p>
-</blockquote></th>
-<th><blockquote>
-<p>Susceptibility Class3</p>
-</blockquote></th>
-<th><blockquote>
-<p>MortProb</p>
-</blockquote></th>
-<th><blockquote>
-<p>Susceptibility Class2</p>
-</blockquote></th>
-<th><blockquote>
-<p>MortProb</p>
-</blockquote></th>
-<th><blockquote>
-<p>Susceptibility Class1</p>
-</blockquote></th>
-<th><blockquote>
-<p>MortProb</p>
-</blockquote></th>
-<th><blockquote>
-<p>CFS</p>
-</blockquote></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Fir Engraver</td>
-<td>AbieConc</td>
-<td>0</td>
-<td>0</td>
-<td>10</td>
-<td>0.99</td>
-<td>60</td>
-<td>0.99</td>
-<td>0</td>
-<td>0</td>
-<td>10</td>
-<td>0.15</td>
-<td>60</td>
-<td>0.35</td>
-<td>yes</td>
-</tr>
-<tr class="even">
-<td>Fir Engraver</td>
-<td>AbieMagn</td>
-<td>0</td>
-<td>0</td>
-<td>10</td>
-<td>0.9</td>
-<td>60</td>
-<td>0.8</td>
-<td>0</td>
-<td>0</td>
-<td>10</td>
-<td>0.05</td>
-<td>60</td>
-<td>0.15</td>
-<td>yes</td>
-</tr>
-<tr class="odd">
-<td>JPB</td>
-<td>PinuJeff</td>
-<td>0</td>
-<td>0.1</td>
-<td>20</td>
-<td>1</td>
-<td>25</td>
-<td>1</td>
-<td>0</td>
-<td>0.1</td>
-<td>40</td>
-<td>0.5</td>
-<td>120</td>
-<td>0.1</td>
-<td>yes</td>
-</tr>
-<tr class="even">
-<td>MPB</td>
-<td>PinuAlbi</td>
-<td>20</td>
-<td>0.33</td>
-<td>60</td>
-<td>0.66</td>
-<td>80</td>
-<td>0.9</td>
-<td>20</td>
-<td>0.05</td>
-<td>60</td>
-<td>0.1</td>
-<td>80</td>
-<td>0.2</td>
-<td>yes</td>
-</tr>
-<tr class="odd">
-<td>MPB</td>
-<td>PinuLamb</td>
-<td>20</td>
-<td>0.33</td>
-<td>60</td>
-<td>0.66</td>
-<td>80</td>
-<td>1</td>
-<td>20</td>
-<td>0.05</td>
-<td>60</td>
-<td>0.2</td>
-<td>80</td>
-<td>0.5</td>
-<td>yes</td>
-</tr>
-<tr class="even">
-<td>MPB</td>
-<td>PinuCont</td>
-<td>20</td>
-<td>0.33</td>
-<td>60</td>
-<td>0.66</td>
-<td>80</td>
-<td>0.9</td>
-<td>20</td>
-<td>0.05</td>
-<td>60</td>
-<td>0.1</td>
-<td>80</td>
-<td>0.2</td>
-<td>yes</td>
-</tr>
-<tr class="odd">
-<td>MPB</td>
-<td>PinuMont</td>
-<td>20</td>
-<td>0.33</td>
-<td>60</td>
-<td>0.66</td>
-<td>80</td>
-<td>0.9</td>
-<td>20</td>
-<td>0.05</td>
-<td>60</td>
-<td>0.1</td>
-<td>80</td>
-<td>0.2</td>
-<td>yes</td>
-</tr>
-</tbody>
-</table>
+Agent | Species Name | Minor Host Age | SRDProb | 2nd Host Age | SRDProb | Major Host Age | SRDProb | Susceptibility Class3 | MortProb | Susceptibility Class2 | MortProb | Susceptibility Class1 | MortProb | CFS
+-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+Fir Engraver | AbieConc | 0 |	0 |	10 |	0.99 |	60 |	0.99 |	0 |	0 |	10	| 0.15 |	60 |	0.35	| yes
+Fir Engraver | AbieMagn |	0 |	0 |	10 |	0.9 |	60 |	0.8 |	0 |	0 |	10 |	0.05 |	60	| 0.15 |	yes
+JPB |	PinuJeff |	0 |	0.1 |	20 |	1 |	25 |	1 |	0 |	0.1 |	40 |	0.5 |	120 |	0.1 |	yes
+MPB |	PinuAlbi |	20 |	0.33 |	60 |	0.66 |	80 |	0.9 |	20 |	0.05 |	60 |	0.1 |	80 |	0.2 |	yes
+MPB |	PinuLamb |	20 |	0.33 |	60 |	0.66 |	80 |	1 |	20 |	0.05 |	60 |	0.2 |	80 |	0.5 |	yes
+MPB |	PinuCont |	20 |	0.33 |	60 |	0.66 |	80 |	0.9	| 20 |	0.05 |	60 |	0.1 |	80 |	0.2	| yes
+MPB |	PinuMont |	20 |	0.33 |	60 |	0.66 |	80 |	0.9	| 20 |	0.05	| 60 |	0.1 |	80 |	0.2 |	yes
 
 White pine blister rust was not incorporated into this model at this
 time. There is limited information related to the rate of spread and
@@ -1554,14 +1340,14 @@ MPB CFS Synthesis
 
 Safranyik 2006
 
-Cole and Amman????
+Cole and Amman
 
 Bradley and Tueller 2001
 
 Climate Change
 ==============
 
-[\[CHART\]]{.chart}
+<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/Inputs-and-Methods/Images%20for%20methods/avg_annual_temp.png>
 
 **Notes:**
 
