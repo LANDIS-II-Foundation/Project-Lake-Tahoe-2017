@@ -5,7 +5,7 @@ parameters used, as well as the version of extension used are all
 available on github at:
 https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017
 
-Contents (#contents)
+Contents
 ========
 
 [NECN Hydro](#necn-hydro)
@@ -67,7 +67,7 @@ probably be pertinent for similar input translation for other projects.
 There is a companion spreadsheet for this called
 'Input\_Translator.xlsx' in the same directory as this.
 
-##NECN-H input maps
+NECN-H input maps
 -----------------
 
 ### Soil physical property/quality maps
@@ -123,7 +123,7 @@ SOM1surf (75 g C m^-2^; 2.16% of total), SOM1soil (100 g C m^-2^;
 then used raster calculator to create individual SOM pool maps.
 
 The new total soil carbon values are:
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/LTW_SOC.png/>
+![Carbon inputs](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/LTW_SOC.png/)
 
 
 So if anything, we were slightly over predicting soil carbon, especially
@@ -148,7 +148,7 @@ work well for a large number of different soils.*
 
 I used the guidelines above to develop these parameters
 
-            | Century name  | \% of total C |  C/N ratio
+   | Century name  | \% of total C |  C/N ratio
   ----------| -------------- |--------------- |-----------
   SOM1surf |  Microbial  |    1         |      10
   SOM1soil |  Active     |    2         |      10
@@ -283,22 +283,23 @@ Potential solutions:
 5.  Introduce white pine blister rust as mortality agent.
 
 Table 1.Species parameters
-Species	|	Longevity	|	Sexual Maturity	|	Shade Tol.	|	Shade source	|	Changes?	|	Fire Tolerance	|	Seed DispersalEffective Distance	|	Seed Dispersal Maximum Distance	|	Veg Reproduction	|	Veg Sprout Age Min	|	Veg Sprout Age Max	|	Post-Fire Regen	|
------|-----|------|-------|-------|-------|------|------|-------|-------|--------|------|------|
-PinuJeff	|	500	|	25	|	2	|	Jenkinsen, Silvics Manual. "The species is intolerant of shade"	|	Change to 1	|	5	|	50	|	300	|	0	|	0	|	0	|	none	|
-PinuLamb	|	550	|	20	|	3	|	Kinlock and Scheuner, Silvics Manual. " Sugar pine tolerates shade better than ponderosa pine but is slightly less tolerant than incense-cedar and Douglas-fir and much less so than white fir (14)."	|	Change to 2?	|	5	|	30	|	400	|	0	|	0	|	0	|	none	|
-CaloDecu	|	500	|	30	|	3	|	Powers and Oliver, Silvics Manual, "Incense-cedar has been rated as more shade tolerant (22) than the associated pines and Douglas-fir (16), and perhaps less tolerant than white fir and grand fir."	|	Hold?	|	5	|	30	|	1000	|	0	|	0	|	0	|	none	|
-AbieConc	|	450	|	35	|	4	|	Laacke, Silvics Manual. "In general, white fir becomes established best in partial shade, but once established grows best in full sunlight. It is less tolerant of shade than associated true firs (except red fir), is slightly more tolerant than Douglas-fir, and is much more tolerant than pines or oaks (37,41,56). Because white fir can survive and grow beneath heavy brush cover and eventually overtop the brush and dominate the site, many pure stands exist in otherwise mixed conifer areas (36)."	|	Hold?	|	3	|	30	|	500	|	0	|	0	|	0	|	none	|
-AbieMagn	|	500	|	40	|	3	|	Laacke, Silvics Manual. "Although red fir grows best in full sunlight, it can survive and grow for long periods in relatively dense shade. Red fir's tolerance of shade appears to be less than that of mountain hemlock, slightly less than that of white fir and Brewer spruce, but greater than that of all of its other associates. Red fir's capacity to maintain significantly more foliage under shade than white fir suggests that the tolerance difference between them is marginal (1). It is most accurately classed as tolerant of shade. Red fir seedlings are slightly more hardy in full sun than white fir seedlings but become established most easily in partial shade (14,26). "	|	Increase to 4?	|	4	|	30	|	500	|	0	|	0	|	0	|	none	|
-PinuCont	|	250	|	7	|	1	|	Lotan and Critchfield, Silvics Manual. "Lodgepole pine is very intolerant of shade and competition from other plant species."	|	Hold	|	2	|	30	|	300	|	0	|	0	|	0	|	none	|
-PinuMont	|	550	|	18	|	3	|	Graham, Silvics Manual. "It is classed as intermediate in shade tolerance when compared to other northwestern tree species."	|	Change to 2?	|	4	|	30	|	800	|	0	|	0	|	0	|	none	|
-TsugMert	|	800	|	20	|	5	|	Means, Silvics Manual. "Mountain hemlock is classed as tolerant of shade and other forms of competition (10,48,55)"	|	Hold	|	1	|	30	|	800	|	0.0005	|	100	|	800	|	none	|
-PinuAlbi	|	900	|	30	|	3	|	Arno and Hoff, Silvics Manual. "Although whitebark pine has been tentatively rated very intolerant of competition or shade (12), recent observers (8,25,60,66,71) believe that it is intermediate or intolerant, about equivalent to western white pine or interior Douglas-fir. Whitebark pine is less tolerant than subalpine fir, spruce, and mountain hemlock; however, it is more tolerant than lodgepole pine and alpine larch."	|	Change to 2?	|	2	|	30	|	2500	|	0.0001	|	100	|	900	|	none	|
-PopuTrem	|	175	|	15	|	1	|	Perala, Silvics Manual. "In both the eastern and western parts of its range, quaking aspen is classed as very intolerant of shade, a characteristic it retains throughout its life."	|	Hold	|	2	|	30	|	1000	|	0.9	|	1	|	175	|	resprout	|
-NonnResp	|	80	|	5	|	2	|		|		|	1	|	30	|	550	|	0.85	|	5	|	70	|	resprout	|
-NonnSeed	|	80	|	5	|	2	|		|		|	1	|	30	|	1000	|	0	|	0	|	0	|	none	|
-FixnResp	|	80	|	5	|	1	|		|		|	1	|	30	|	500	|	0.75	|	5	|	70	|	resprout	|
-FixnSeed	|	80	|	5	|	1	|		|		|	1	|	30	|	800	|	0	|	0	|	0	|	none	|
+
+ Species	|	Longevity	|	Sexual Maturity	|	Shade Tol.	|	Shade source	|	Changes?	|	Fire Tolerance	|	Seed DispersalEffective Distance	|	Seed Dispersal Maximum Distance	|	Veg Reproduction	|	Veg Sprout Age Min	|	Veg Sprout Age Max	|	Post-Fire Regen	|
+ -----|-----|------|-------|-------|-------|------|------|-------|-------|--------|------|------|
+ PinuJeff	|	500	|	25	|	2	|	Jenkinsen, Silvics Manual. "The species is intolerant of shade"	|	Change to 1	|	5	|	50	|	300	|	0	|	0	|	0	|	none	|
+ PinuLamb	|	550	|	20	|	3	|	Kinlock and Scheuner, Silvics Manual. " Sugar pine tolerates shade better than ponderosa pine but is slightly less tolerant  than incense-cedar and Douglas-fir and much less so than white fir (14)."	|	Change to 2?	|	5	|	30	|	400	|	0	|	0	|	0	|	none	|
+ CaloDecu	|	500	|	30	|	3	|	Powers and Oliver, Silvics Manual, "Incense-cedar has been rated as more shade tolerant (22) than the associated pines and Douglas-fir (16), and perhaps less tolerant than white fir and grand fir."	|	Hold?	|	5	|	30	|	1000	|	0	|	0	|	0	|	none	|
+ AbieConc	|	450	|	35	|	4	|	Laacke, Silvics Manual. "In general, white fir becomes established best in partial shade, but once established grows best in full sunlight. It is less tolerant of shade than associated true firs (except red fir), is slightly more tolerant than Douglas-fir, and is much more tolerant than pines or oaks (37,41,56). Because white fir can survive and grow beneath heavy brush cover and eventually overtop the brush and dominate the site, many pure stands exist in otherwise mixed conifer areas (36)."	|	Hold?	|	3	|	30	|	500	|	0	|	0	|	0	|	none	|
+ AbieMagn	|	500	|	40	|	3	|	Laacke, Silvics Manual. "Although red fir grows best in full sunlight, it can survive and grow for long periods in relatively dense shade. Red fir's tolerance of shade appears to be less than that of mountain hemlock, slightly less than that of white fir and Brewer spruce, but greater than that of all of its other associates. Red fir's capacity to maintain significantly more foliage under shade than white fir suggests that the tolerance difference between them is marginal (1). It is most accurately classed as tolerant of shade. Red fir seedlings are slightly more hardy in full sun than white fir seedlings but become established most easily in partial shade (14,26). "	|	Increase to 4?	|	4	|	30	|	500	|	0	|	0	|	0	|	none	|
+ PinuCont	|	250	|	7	|	1	|	Lotan and Critchfield, Silvics Manual. "Lodgepole pine is very intolerant of shade and competition from other plant species."	|	Hold	|	2	|	30	|	300	|	0	|	0	|	0	|	none	|
+ PinuMont	|	550	|	18	|	3	|	Graham, Silvics Manual. "It is classed as intermediate in shade tolerance when compared to other northwestern tree species."	|	Change to 2?	|	4	|	30	|	800	|	0	|	0	|	0	|	none	|
+ TsugMert	|	800	|	20	|	5	|	Means, Silvics Manual. "Mountain hemlock is classed as tolerant of shade and other forms of competition (10,48,55)"	|	Hold	|	1	|	30	|	800	|	0.0005	|	100	|	800	|	none	|
+ PinuAlbi	|	900	|	30	|	3	|	Arno and Hoff, Silvics Manual. "Although whitebark pine has been tentatively rated very intolerant of competition or shade (12), recent observers (8,25,60,66,71) believe that it is intermediate or intolerant, about equivalent to western white pine or interior Douglas-fir. Whitebark pine is less tolerant than subalpine fir, spruce, and mountain hemlock; however, it is more tolerant than lodgepole pine and alpine larch."	|	Change to 2?	|	2	|	30	|	2500	|	0.0001	|	100	|	900	|	none	|
+ PopuTrem	|	175	|	15	|	1	|	Perala, Silvics Manual. "In both the eastern and western parts of its range, quaking aspen is classed as very intolerant of  shade, a characteristic it retains throughout its life."	|	Hold	|	2	|	30	|	1000	|	0.9	|	1	|	175	|	resprout	|
+ NonnResp	|	80	|	5	|	2	|		|		|	1	|	30	|	550	|	0.85	|	5	|	70	|	resprout	|
+ NonnSeed	|	80	|	5	|	2	|		|		|	1	|	30	|	1000	|	0	|	0	|	0	|	none	|
+ FixnResp	|	80	|	5	|	1	|		|		|	1	|	30	|	500	|	0.75	|	5	|	70	|	resprout	|
+ FixnSeed	|	80	|	5	|	1	|		|		|	1	|	30	|	800	|	0	|	0	|	0	|	none	|
 
 
 
@@ -388,7 +389,7 @@ values from 1992-2013 back into our fitted equation for lightning
 ignitions, to attempt to mimic the historical ignitions data used to fit
 the equation.
 
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/PLI_LTB.png>
+![Lightning](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/PLI_LTB.png)
 
 *Figure 1: Example of predicted lightning ignitions per day for 16 years
 of historical FWI data using SCRAPPLE method.*
@@ -472,7 +473,7 @@ Maximum area is determined empirically:
 Maximum daily spread area = β0 + β1 \* FWI + β2\*EffectiveWindSpeed
 Equation 4
 
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/v_area_spread.png/>
+![Climate fire spread](ttps://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/v_area_spread.png)
 
 *Figure 2: Daily fire spread area (ha) and daily wind speed velocity.
 Daily fire spread within SCRAPPLE is a function of both daily wind speed
@@ -510,7 +511,7 @@ being broadly representative of the conditions found in the LTB, there
 are many more fires (larger sample size), and fires in the area are
 typically not extensively suppressed due to the rugged terrain.
 
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/GS_AnalysisArea.png/>
+![Greater Sierra](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/GS_AnalysisArea.png)
 
 *Figure 3: Sierra Nevada analysis area for generating fire extension
 parameters for the Lake Tahoe West project, outlined in black. Green
@@ -561,7 +562,7 @@ Agency). We used the Threat and Defense Zone to identify three levels of
 suppression ranging from highly (\~95%), moderately (\~65%), and very
 low suppression (\~5%).
 
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/SUPPRESSION_TFFP.png/>
+![Suppression_zones](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/tree/master/Inputs-and-Methods/Images%20for%20methods/SUPPRESSION_TFFP.png/)
 
 One known issue was that the scenario designers wanted a \"paint the
 corners\" approach to fire management. However, the same level of
@@ -665,15 +666,6 @@ Scenarios are based solely on west shore for acres
     feet and 0.5 miles if the polygon was completely within that
     distance of the road.
 
-
-**Scenario 4**
-Management Zones:
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/MgmtZone_Scen3.tif>
-
-Stands:
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/scen3_mgmt_areas_3ha.tif>
-
-
 *KNOWN ISSUES:*
 
 These were issues found in the original parameterization. Fixes were
@@ -681,14 +673,12 @@ either incorporated into existing model runs or left for the next model
 round.
 
 1.  *SALVAGE LOGGING*
-
     a.  GOAL: Salvage is a priority over live thinning and occurs in both WUI
         Defense and WUI Threat. 90% of the area that experienced a high
         mortality event (from either fire or insects) would be salvaged
         prior to new live thinning occurring. 40% of the salvaged area
         would be replanted with: 80% Jeffrey pine, 10% cedar, 5% red
         fir, 5% sugar pine.
-
     b.  WHAT HAPPENED: Salvage logging was NOT implemented as expected. However, it
         could be added in the next round. Replanting did NOT occur. Note
         that the materials harvested do not appear within the harvest
@@ -696,30 +686,22 @@ round.
         maps from the NECN extension.
 
 2.  *STAND RE-ENTRY*
-
     c.  GOAL: Re-entry after harvest or disturbance was to be set at the
         dominant mean FRI types for each management zone.
-
-        
     d.  WHAT HAPPENED: Stands were re-entered more than expected. MinTimeSinceDamage
         was the only restriction used when MinTimeSinceHarvest should
         also have been used. Additional replicates were run with the
         fixes:
-
         i.  Scenario 2: stand re-entry occurs at 20 years after
             disaster/harvest.
-
         ii. Scenario 3 & 4: stand re-entry occurs at 11 years.
-
     e.  The result of the changes was increased stand carbon since fewer
         young cohorts were wiped out. There were also fewer harvest
         events that resulted in nothing coming off the landscape.
 
 3.  *HARVEST RESIDUES*
-
     f.  GOAL: 60% of hand thinning and 80% of mechanical thinning woody
         residue to be harvested.
-
     g.  WHAT HAPPENED: Only 5% of woody harvest residues were removed. Additional
         replicates were run with the corrected harvest targets.
 
@@ -776,22 +758,21 @@ There are five management zones in this scenario.
 -   N/A: This is the area within the defense and threat zones that
     cannot be treated because the slope is greater than 70%.
     
-Management Zones Map:
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_focused/Mgmt_zone_WUI_focus.tif>
 
-Stands:
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_focused/mgmt_areas_scen2_2ha.tif>    
+![Management Zones](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_focused/Mgmt_zone_WUI_focus.tif)
+
+![Stands](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_focused/mgmt_areas_scen2_2ha.tif)
 
 Table 1: Management zones for scenario 2 based on management area plus
 treatment type, with annual acres and percentage treated and total
 available acres to treat in the zone.
 
-  **Management Area** |  **Treatment**  | **Treatment Allocation By Zone**  | **Annual Treatment Acres**  | **Total Annual Acres**  | **Total Acres Available **
+  **Management Area** |  **Treatment**  | **Treatment Allocation By Zone**  | **Annual Treatment Acres**  | **Total Annual Acres**  | **Total Acres Available**
   ---------------------|---------------|----------------------------------|----------------------------|------------------------|----------------------------
   WUI Defense Zone |  Mechanical | 20% |  150 | 750 | 6545
-                   |  Hand | 80% | 600 | 10189
+  | and | 80% | 600 | 10189
   WUI Threat Zone | Mechanical | 20% | 50 | 250 | 2512
-                  | Hand  |  80%  | 200 | 12217
+  | Hand  |  80%  | 200 | 12217
   General Forest | No treatment | 0 | 0 | 0 | 27025
   Wilderness | NA | NA | 0 | 0 | 0 | 89
 
@@ -819,16 +800,16 @@ Table 2: Historic LTB data identifying hectares treated per year defined
 by target area (Lake Tahoe West, CA, and NV broken out between defense
 and threat zones).
 
-  **Zone** | **LTW-Defense** | **LTW-Threat** | **LTW-General** | **CA-Defense** | **CA-Threat** | **CA-General** | **NV-Defense** | **NV-Threat** | **NV-General**
-  -------------------------------------|-----------------|----------------|-----------------|----------------|---------------|----------------|----------------|--------------- ----------------
-  **Code\** | 8 | 7 | 9 | 5  | 4 | 6 | 2 | 1 | 3
-  **Hectares** | 6865 | 6117  | 10846 | 14335 | 7634 | 17437 | 7652 |  6001 |  7748
-  **Mean treated area /yr (ha)** | 216.3 | 101.96 | 0 | 283.05 | 34.1 |  0 | 193.7 | 112.3 | 0
-  **Percentage of each zone treated** | 68.0  | 32.0 |  0.0  | 89.2 | 0.1 | 0.0 |  63.3 | 36.7 |  0.0
+**Zone** | **LTW-Defense** | **LTW-Threat** | **LTW-General** | **CA-Defense** | **CA-Threat** | **CA-General** | **NV-Defense** | **NV-Threat** | **NV-General**
+-------------------------------------|-----------------|----------------|-----------------|----------------|---------------|----------------|----------------|--------------- ----------------
+**Code\** | 8 | 7 | 9 | 5  | 4 | 6 | 2 | 1 | 3
+**Hectares** | 6865 | 6117  | 10846 | 14335 | 7634 | 17437 | 7652 |  6001 |  7748
+**Mean treated area /yr (ha)** | 216.3 | 101.96 | 0 | 283.05 | 34.1 |  0 | 193.7 | 112.3 | 0
+**Percentage of each zone treated** | 68.0  | 32.0 |  0.0  | 89.2 | 0.1 | 0.0 |  63.3 | 36.7 |  0.0
 
 *Biomass Targets*
 
-[Mechanical thinning]{.underline} is ground based only and can occur on
+Mechanical thinning is ground based only and can occur on
 up to 30% slope and up to 1000 ft from existing road. 80% of dead
 biomass is removed during thinning operations.
 
@@ -957,28 +938,26 @@ There are 11 management zones in this scenario.
 -   N/A: This is the area within the broader area with a slope greater
     than 70% than cannot be treated.
     
-Management Zones:
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/MgmtZone_Scen3.tif>
+![Management Zones](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/MgmtZone_Scen3.tif)
 
-Stands:
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/scen3_mgmt_areas_3ha.tif>
+![Stands](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/scen3_mgmt_areas_3ha.tif)
     
 
 Table 5: Management zones for scenario 3 based on management area plus
 treatment type, with annual acres and percentage treated and total
 available acres to treat in the zone.
 
-  **Management Area** | **Treatment\*** | **Treatment Allocation By Zone** | **Annual Treatment Acres** | **Total Annual Acres** | **Total Acres Available **
+  **Management Area** | **Treatment\*** | **Treatment Allocation By Zone** | **Annual Treatment Acres** | **Total Annual Acres** | **Total Acres Available**
   ---------------------|-----------------|----------------------------------|----------------------------|------------------------|----------------------------
   WUI Defense     |     G Mechanical  |   44    |                             794             |            1800         |              7386
-                  |     A Mechanical  |    3    |                              59             |                         |              544
-                  |     Hand          |    53   |                              947            |                         |              8804
+   |     A Mechanical  |    3    |                              59             |                         |              544
+   |     Hand          |    53   |                              947            |                         |              8804
   WUI Threat      |     G Mechanical  |    23   |                              226            |              1000       |              3326
-                  |     A Mechanical  |    3    |                              25             |                         |              369
-                  |     Hand          |    75   |                              749            |                         |              11034
+   |     A Mechanical  |    3    |                              25             |                         |              369
+   |     Hand          |    75   |                              749            |                         |              11034
   General Forest  |     G Mechanical  |    8    |                              83             |              1000       |              1130
-                  |     A Mechanical  |    11   |                              113            |                         |              1551
-                  |     Hand          |    80   |                              804            |                         |              10983
+   |     A Mechanical  |    11   |                              113            |                         |              1551
+   |     Hand          |    80   |                              804            |                         |              10983
   Wilderness      |     Hand          |    100  |                              200            |              200        |              12773
   NA              |     NA            |    100  |                              0              |              0          |              677
 
@@ -1113,6 +1092,11 @@ percent suppression for scenario 4 inputs based on model iterations to
 test this. The goal is to burn 3250 acres of prescribed fire up to
 moderate severity in all zones annually.
 
+![Management Zones](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/MgmtZone_Scen3.tif)
+
+![Stands](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/LTW_LANDIS_Scenarios/HarvestMaps/WUI_extended/scen3_mgmt_areas_3ha.tif)
+
+
 *Management Zones *
 
 There are six management zones in this scenario.
@@ -1143,7 +1127,7 @@ available acres to treat in the zone.
   **Management Area** | **Treatment**  |  **Treatment Allocation By Zone** | **Annual Treatment Acres** | **Total Annual Acres** | **Total Acres Available ** | **Target Acres Fire**
   ---------------------|----------------|----------------------------------|----------------------------|------------------------|----------------------------|-----------------------
   WUI Defense Zone | Mechanical/Burn | 20% | 150 | 750 | 6545 | 410
-                   |  Hand/Burn | 80% | 600  | 10189 | 640
+   |  Hand/Burn | 80% | 600  | 10189 | 640
   WUI Threat       |    Burn Only | 0  |  0 |  0 |  14751 | 1000
   General Forest   |    Burn Only | 0 | 0 | 0 | 13729 | 1000
   Wilderness       |    Burn Only | 0 | 0 | 0 | 13296 | 200
@@ -1287,7 +1271,8 @@ with increasing vulnerability as the trees aged.
 
 Table 1
 
-                       | Fir Engraver   | Jeffrey Pine Beetle | Mountain Pine Beetle
+
+   |Fir Engraver | Jeffrey Pine Beetle | Mountain Pine Beetle
   ---------------------|----------------|---------------------|----------------------
   Pattern           |   Cyclic Uniform | Cyclic Uniform   |    Cyclic Uniform
   Min interval      |   10             | 10               |    10
@@ -1347,7 +1332,7 @@ Bradley and Tueller 2001
 Climate Change
 ==============
 
-<https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/Inputs-and-Methods/Images%20for%20methods/avg_annual_temp.png>
+![climate comparison](https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017/blob/master/Inputs-and-Methods/Images%20for%20methods/avg_annual_temp.png)
 
 **Notes:**
 
