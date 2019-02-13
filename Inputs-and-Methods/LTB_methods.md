@@ -8,7 +8,7 @@ https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017
 Contents
 ========
 
-[NECN Hydro](#necn-hydro)
+[NECN](#necn)
 
 [NECN-H input maps](#necn-h-input-maps)
 
