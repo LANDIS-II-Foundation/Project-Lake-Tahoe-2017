@@ -51,12 +51,12 @@ Contents
 [Climate Change](#climate-change)
 
 
-NECN Hydro
+Net Ecosystem Carbon Nitrogen (NECN) 
 ==========
 
 This section records the translation process from Century Succession
-inputs to NECN-H inputs. For each new input, I will attempt to create a
-method for translating existing Century inputs into NECN-H inputs. If no
+inputs to NECN inputs. For each new input, I will attempt to create a
+method for translating existing Century inputs into NECN inputs. If no
 method can be found for translation, new inputs will be mode with data
 source suggestions. The big change here is the elimination of
 ecoregions, which are replaced by a series of maps containing soils
@@ -67,7 +67,7 @@ probably be pertinent for similar input translation for other projects.
 There is a companion spreadsheet for this called
 'Input\_Translator.xlsx' in the same directory as this.
 
-NECN-H input maps
+NECN input maps
 -----------------
 
 ### Soil physical property/quality maps
@@ -303,7 +303,7 @@ USFS Silvics Manual
 
 USGS Climate Atlas
 
-SCRAPPLE
+SCRPPLE
 ========
 
 Methods
