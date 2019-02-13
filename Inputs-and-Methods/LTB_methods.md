@@ -8,9 +8,9 @@ https://github.com/LANDIS-II-Foundation/Project-Lake-Tahoe-2017
 Contents
 ========
 
-[NECN](#necn)
+[Net Ecosystem Carbon Nitrogen (NECN)](#necn)
 
-[NECN-H input maps](#necn-h-input-maps)
+[NECN input maps](#necn-h-input-maps)
 
 [Soil physical property/quality maps](#soil-physical-propertyquality-maps)
 
