@@ -1,23 +1,23 @@
+>>This file is used for Scenarios 1-3.
 LandisData  "SCRAPPLE"
 
 Timestep                            1
 
-AccidentalIgnitionsMap     E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/human_ign1.tif
-LightningIgnitionsMap  E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/lightning1.tif
-RxIgnitionsMap  E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/RxBurn_FACTS_CA_Igns.tif <<1/25 Incorporated Ca state parks into this new map
->>RxIgnitionsMap  E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/rx1.tif
+AccidentalIgnitionsMap     human_ign1.tif
+LightningIgnitionsMap  lightning1.tif
+RxIgnitionsMap  RxBurn_FACTS_CA_Igns.tif <<1/25 Incorporated Ca state parks into this new map
 
-AccidentalSuppressionMap	E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/Suppression_2014_TFFP.tif
-LightningSuppressionMap		E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/Suppression_2014_TFFP.tif
-RxSuppressionMap		E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/Suppression_2014_TFFP.tif
+AccidentalSuppressionMap	Suppression_2014_TFFP.tif
+LightningSuppressionMap		Suppression_2014_TFFP.tif
+RxSuppressionMap		Suppression_2014_TFFP.tif
 
-GroundSlopeMap E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/slope.img
-UphillSlopeAzimuthMap  E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/upslope.img
+GroundSlopeMap slope.img
+UphillSlopeAzimuthMap  upslope.img
 
 >>Updated on 2/20 w new fits params
-LightningIgnitionsB0   -4.5
+LightningIgnitionsB0   -4.7
 LightningIgnitionsB1   0.03
-AccidentalIgnitionsB0  -3.3
+AccidentalIgnitionsB0  -3.5
 AccidentalIgnitionsB1  0.03
 
 >> A generic parameter
@@ -31,18 +31,18 @@ MinimumRxFireWeatherIndex 8.0
 MaximumRxFireIntensity 1
 NumberRxAnnualFires 0
 FirstDayRxFires 275 <<October 1
->>TargetRxSize 40
+TargetRxSize 40
 
 >>These are all based on a simple glm, unless we can find a better method I guess (11/15)
 >> 1/17/2018 With suppression tables on all 5, 65, 95 we get pretty good results from 80, -3, -2.5. The FRP is good but there are too many little fires
-MaximumSpreadAreaB0	-80 <<7/31 replicates on Box were run with -80
-MaximumSpreadAreaB1	3.5 <<-3 <<FWI
+MaximumSpreadAreaB0	-80.2 <<7/31 replicates on Box were run with -80
+MaximumSpreadAreaB1	3 <<-3 <<FWI
 MaximumSpreadAreaB2	2.5 <<-2.5  <<effective wind speed
 
 >>Fitted params on 12/27 using optim() BFGS method : -1.79, 0.06, -.915, 0.0126
 >>Fitted params on 12/28 using optim() SANN method: 0.33980600,  0.01726217, -0.31600116,  0.03447919
-SpreadProbabilityB0 -35.8 <<more negative means lower spread. 7/31 replicates on Box were run with -38
-SpreadProbabilityB1 0.6  <<FWI
+SpreadProbabilityB0 -38.2 <<more negative means lower spread. 7/31 replicates on Box were run with -38
+SpreadProbabilityB1 0.575  <<FWI
 SpreadProbabilityB2  0.915 << relativized fine fuels. Was .915
 SpreadProbabilityB3 0.0126 << effective wind speed. 
 

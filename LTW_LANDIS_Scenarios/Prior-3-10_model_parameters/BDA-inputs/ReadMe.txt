@@ -1,0 +1,1 @@
+BaseBDA has been upgraded to BiomassBDA and the files in this folder were the ones initially used in the first round of scenarios for the LTB project.

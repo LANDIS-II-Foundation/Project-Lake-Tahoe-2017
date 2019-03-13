@@ -1,20 +1,18 @@
->>This input is for the expanded RX burn scenario (Scenario4). The goal is to get 1320ha of Rx fire on average across te landscape
-
 LandisData  "SCRAPPLE"
 
 Timestep                            1
 
-AccidentalIgnitionsMap     human_ign1.tif
-LightningIgnitionsMap  lightning1.tif
-RxIgnitionsMap  RX500.tif <<igns are consistent across mgmt zones
+AccidentalIgnitionsMap     E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/human_ign1.tif
+LightningIgnitionsMap  E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/lightning1.tif
+RxIgnitionsMap  E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/RxBurn_FACTS_CA_Igns.tif <<1/25 Incorporated Ca state parks into this new map
+>>RxIgnitionsMap  E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/rx1.tif
 
+AccidentalSuppressionMap	E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/Suppression_2014_TFFP.tif
+LightningSuppressionMap		E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/Suppression_2014_TFFP.tif
+RxSuppressionMap		E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/Suppression_2014_TFFP.tif
 
-AccidentalSuppressionMap	Suppression_2014_TFFP.tif
-LightningSuppressionMap		Suppression_2014_TFFP.tif
-RxSuppressionMap		RX_igns_scen4.tif <<This is just a map with all raster values at 1. Using lower suppression for rx burns
-
-GroundSlopeMap slope.img
-UphillSlopeAzimuthMap  upslope.img
+GroundSlopeMap E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/slope.img
+UphillSlopeAzimuthMap  E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/ScrappleInputs/upslope.img
 
 >>Updated on 2/20 w new fits params
 LightningIgnitionsB0   -4.5
@@ -23,28 +21,28 @@ AccidentalIgnitionsB0  -3.3
 AccidentalIgnitionsB1  0.03
 
 >> A generic parameter
->> Developed from LANDFIRE fine fuels columns
-MaximumFineFuels 200.0
+>> Developed from running sim sith no fire and analyzing patterns
+MaximumFineFuels 200.00 <<Was 500
 
 >> Prescribed Fire Parameters
-MaximumRxWindSpeed 100.0
-MaximumRxFireWeatherIndex 100.0
-MinimumRxFireWeatherIndex 0.0
+MaximumRxWindSpeed 8.0
+MaximumRxFireWeatherIndex 10.0
+MinimumRxFireWeatherIndex 8.0
 MaximumRxFireIntensity 1
-NumberRxAnnualFires 30
-FirstDayRxFires 260 <<This is made up
-TargetRxSize 40
+NumberRxAnnualFires 0
+FirstDayRxFires 275 <<October 1
+>>TargetRxSize 40
 
 >>These are all based on a simple glm, unless we can find a better method I guess (11/15)
 >> 1/17/2018 With suppression tables on all 5, 65, 95 we get pretty good results from 80, -3, -2.5. The FRP is good but there are too many little fires
-MaximumSpreadAreaB0	-80.2 <<7/31 replicates on Box were run with -80
-MaximumSpreadAreaB1	3 <<-3 <<FWI
+MaximumSpreadAreaB0	-80 <<7/31 replicates on Box were run with -80
+MaximumSpreadAreaB1	3.5 <<-3 <<FWI
 MaximumSpreadAreaB2	2.5 <<-2.5  <<effective wind speed
 
 >>Fitted params on 12/27 using optim() BFGS method : -1.79, 0.06, -.915, 0.0126
 >>Fitted params on 12/28 using optim() SANN method: 0.33980600,  0.01726217, -0.31600116,  0.03447919
-SpreadProbabilityB0 -38.2 <<more negative means lower spread. 7/31 replicates on Box were run with -38
-SpreadProbabilityB1 0.575  <<FWI
+SpreadProbabilityB0 -35.8 <<more negative means lower spread. 7/31 replicates on Box were run with -38
+SpreadProbabilityB1 0.6  <<FWI
 SpreadProbabilityB2  0.915 << relativized fine fuels. Was .915
 SpreadProbabilityB3 0.0126 << effective wind speed. 
 
@@ -59,8 +57,8 @@ SuppressionMaxWindSpeed 40
 SuppressionTable  << 1/19/18 This still needs some work to finalize these numbers since we didn't get them from the sub-committee
 >>Type		FWI1	FWI2	Lo	Md	High-Effectiveness
 Accidental	40 		60		0	5	10	<< Used to be 5 65 95. FWI cutoffs used to be 30 and 50
-Lightning	40 		60		0	5	10  <<
-Rx 			100 	100  	0	0	0  <<
+Lightning	40 		60		0	5	10
+Rx 			40 		60  	0	5	10
 
 DeadWoodTable
 PinuJeff  22
