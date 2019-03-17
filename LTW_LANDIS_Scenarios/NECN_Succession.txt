@@ -6,30 +6,26 @@ SeedingAlgorithm  WardSeedDispersal
 
 InitialCommunities      	"LTB_NECNH_IC_Marchupdate.txt"
 InitialCommunitiesMap   	"init-comm.img"
->>ClimateConfigFile		climate-generator-baseline.txt   <<historical 1991-2010
 ClimateConfigFile		climate-generator-change.txt  <<RCP4.5
->>ClimateConfigFile		climate-generator-change_high.txt <<RCP8.5 
 
->>AgeOnlyDisturbances:BiomassParameters  E:/SNPLMA3/LANDIS_modeling/LTW_NECN_H/bio-reductions-standard.txt
-
-SoilDepthMapName				depth_cont.img <<
-SoilDrainMapName				drain_cont.img <<
-SoilBaseFlowMapName				BaseFFrac.img <<0.4 Static old Century numbers. ML is keeping these constant
-SoilStormFlowMapName				StormFFrac.img <<0.4 Static old Century numbers. ML is keeping these constant
-SoilFieldCapacityMapName			FieldCap.img <<.109 Static old Century numbers. Missing from our SSURGO
-SoilWiltingPointMapName				WiltPoint.img <<0.055 Static old Century numbers. Missing from our SSURGO 
-SoilPercentSandMapName				PercentSand.img <<0.714. Static old Century numbers. Missing from our SSURGO
-SoilPercentClayMapName				PercentClay.img <<0.070 Static old Century numbers.Missing from our SSURGO
-InitialSOM1CsurfMapName				SOM1Csurf.img <<Need to remake this for some reason. Start at ArcGIS
-InitialSOM1NsurfMapName				SOM1Nsurf.img <<LTW_SOM1surfN.img <<Based off of Century default soil pool C:N ratios
-InitialSOM1CsoilMapName				SOM1Csoil.img <<LTW_SOMC1soil_rightextent.img <<
-InitialSOM1NsoilMapName				NsoilSOM1.img <<LTW_SOM1soilN.img <<
-InitialSOM2CMapName				SOM2C.img <<LTW_SOMC2_rightextent.img <<
-InitialSOM2NMapName				SOM2N.img <<LTW_SOM2N.img <<
-InitialSOM3CMapName				SOM3C.img <<LTW_SOMC2_rightextent.img  <<
-InitialSOM3NMapName				SOM3N.img <<LTW_SOM3N.img <<
-InitialDeadWoodSurfaceMapName			SurfaceDead.tif 
-InitialDeadCoarseRootsMapName			SOM1Csurf.img <<New, placeholders for now
+SoilDepthMapName				necn_input_maps/depth_cont.img <<
+SoilDrainMapName				necn_input_maps/drain_cont.img <<
+SoilBaseFlowMapName				necn_input_maps/BaseFFrac.img <<0.4 Static old Century numbers. ML is keeping these constant
+SoilStormFlowMapName				necn_input_maps/StormFFrac.img <<0.4 Static old Century numbers. ML is keeping these constant
+SoilFieldCapacityMapName			necn_input_maps/FieldCap.img <<.109 Static old Century numbers. Missing from our SSURGO
+SoilWiltingPointMapName				necn_input_maps/WiltPoint.img <<0.055 Static old Century numbers. Missing from our SSURGO 
+SoilPercentSandMapName				necn_input_maps/PercentSand.img <<0.714. Static old Century numbers. Missing from our SSURGO
+SoilPercentClayMapName				necn_input_maps/PercentClay.img <<0.070 Static old Century numbers.Missing from our SSURGO
+InitialSOM1CsurfMapName				necn_input_maps/SOM1Csurf.img <<Need to remake this for some reason. Start at ArcGIS
+InitialSOM1NsurfMapName				necn_input_maps/SOM1Nsurf.img <<LTW_SOM1surfN.img <<Based off of Century default soil pool C:N ratios
+InitialSOM1CsoilMapName				necn_input_maps/SOM1Csoil.img <<LTW_SOMC1soil_rightextent.img <<
+InitialSOM1NsoilMapName				necn_input_maps/NsoilSOM1.img <<LTW_SOM1soilN.img <<
+InitialSOM2CMapName				necn_input_maps/SOM2C.img <<LTW_SOMC2_rightextent.img <<
+InitialSOM2NMapName				necn_input_maps/SOM2N.img <<LTW_SOM2N.img <<
+InitialSOM3CMapName				necn_input_maps/SOM3C.img <<LTW_SOMC2_rightextent.img  <<
+InitialSOM3NMapName				necn_input_maps/SOM3N.img <<LTW_SOM3N.img <<
+InitialDeadWoodSurfaceMapName			necn_input_maps/SurfaceDead.tif 
+InitialDeadCoarseRootsMapName			necn_input_maps/SOM1Csurf.img <<New, placeholders for now
 
 CalibrateMode 	no
 SmokeModelOutputs yes

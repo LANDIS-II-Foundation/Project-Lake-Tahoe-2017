@@ -3,16 +3,16 @@ LandisData  "SCRAPPLE"
 
 Timestep                            1
 
-AccidentalIgnitionsMap     human_ign1.tif
-LightningIgnitionsMap  lightning1.tif
-RxIgnitionsMap  RxBurn_FACTS_CA_Igns.tif <<1/25 Incorporated Ca state parks into this new map
+AccidentalIgnitionsMap     	scrappleinputs\human_ign1.tif
+LightningIgnitionsMap  		scrappleinputs\lightning1.tif
+RxIgnitionsMap  		scrappleinputs\RxBurn_FACTS_CA_Igns.tif <<1/25 Incorporated Ca state parks into this new map
 
-AccidentalSuppressionMap	Suppression_2014_TFFP.tif
-LightningSuppressionMap		Suppression_2014_TFFP.tif
-RxSuppressionMap		Suppression_2014_TFFP.tif
+AccidentalSuppressionMap	scrappleinputs\Suppression_2014_TFFP.tif
+LightningSuppressionMap		scrappleinputs\Suppression_2014_TFFP.tif
+RxSuppressionMap		scrappleinputs\Suppression_2014_TFFP.tif
 
-GroundSlopeMap slope.img
-UphillSlopeAzimuthMap  upslope.img
+GroundSlopeMap 			scrappleinputs\slope.img
+UphillSlopeAzimuthMap  		scrappleinputs\upslope.img
 
 >>Updated on 2/20 w new fits params
 LightningIgnitionsB0   -4.7

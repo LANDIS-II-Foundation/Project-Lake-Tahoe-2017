@@ -12,7 +12,7 @@ NRDMapNames	bda/{agentName}-NRD-{timestep}.img
 
 LogFile		bda_log.csv
 
-BDAInputFiles	JeffreyPineBeetle_Jan23.txt	
+BDAInputFiles	JeffreyPineBeetle.txt	
                 MtnPineBeetle.txt	
 				FirEngraver_Dominant.txt
 				WPBR_chronic.txt
