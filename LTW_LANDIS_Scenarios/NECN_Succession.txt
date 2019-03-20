@@ -40,7 +40,7 @@ Latitude				39.02
 DenitrificationRate		0.1 <<was 0.5
 DecayRateSurf			0.4
 DecayRateSOM1			1.0
-DecayRateSOM2			0.01 << Was 0.02 from Louise. changed 2/5
+DecayRateSOM2			0.02 << Was 0.02 from Louise. changed 2/5
 DecayRateSOM3			0.0002
 
 MaximumLAI
