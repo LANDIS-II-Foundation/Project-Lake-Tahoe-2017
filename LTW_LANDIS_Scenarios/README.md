@@ -11,6 +11,7 @@ Scenario4 | fuel-treatments-LTW-WUI-focused_extendedRX.txt
 
 For the fire parameters:
 
+Scenario | file name
 --- | ---
 Scenarios 1 - 3 | SCRAPPLE_LTW.txt
 Scenario 4 | SCRAPPLE_LTW_ExpandedRX.txt
