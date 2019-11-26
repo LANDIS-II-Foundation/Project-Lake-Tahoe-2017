@@ -15,14 +15,14 @@ GroundSlopeMap 			scrappleinputs\slope.img
 UphillSlopeAzimuthMap  		scrappleinputs\upslope.img
 
 >>Updated on 2/20 w new fits params
-LightningIgnitionsB0   -4.7
+LightningIgnitionsB0   -4.6
 LightningIgnitionsB1   0.03
-AccidentalIgnitionsB0  -3.5
+AccidentalIgnitionsB0  -3.4
 AccidentalIgnitionsB1  0.03
 
 >> A generic parameter
 >> Developed from running sim sith no fire and analyzing patterns
-MaximumFineFuels 200.00 <<Was 500
+MaximumFineFuels 5400.00 <<Was 500
 
 >> Prescribed Fire Parameters
 MaximumRxWindSpeed 8.0
@@ -35,7 +35,7 @@ TargetRxSize 40
 
 >>These are all based on a simple glm, unless we can find a better method I guess (11/15)
 >> 1/17/2018 With suppression tables on all 5, 65, 95 we get pretty good results from 80, -3, -2.5. The FRP is good but there are too many little fires
-MaximumSpreadAreaB0	-80.2 <<7/31 replicates on Box were run with -80
+MaximumSpreadAreaB0	-80 <<7/31 replicates on Box were run with -80
 MaximumSpreadAreaB1	3 <<-3 <<FWI
 MaximumSpreadAreaB2	2.5 <<-2.5  <<effective wind speed
 
@@ -46,9 +46,9 @@ SpreadProbabilityB1 0.575  <<FWI
 SpreadProbabilityB2  0.915 << relativized fine fuels. Was .915
 SpreadProbabilityB3 0.0126 << effective wind speed. 
 
-IntensityFactor:FineFuelPercent  0.3 <<Was 0.1
+IntensityFactor:FineFuelPercent  0.206 <<Was 0.1
 IntensityFactor:LadderFuelMaxAge 40
-IntensityFactor:LadderFuelBiomass 1500 <<was 1200
+IntensityFactor:LadderFuelBiomass 2000 <<was 1200
 
 LadderFuelSpeciesList 
 PinuJeff AbieConc CaloDecu
